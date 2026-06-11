@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html>
+ <head>
+	<title>Cooker</title>
+<style>
+* { box-sizing:border-box; 
+    margin:0%; 
+    font-family:Arial;
+}
+body {background-color: #eaeded;}
+ .box1-logo { 
+	background-color:#0f1111;
+	height:72px;
+	color:white;
+	padding:1px;
+	display:flex;
+	align-items:center;
+	
+ }
+.box-logo {
+	height:70px;
+	width:165px;
+	border:0px solid  ;
+	margin:1px 30px 1px 30px;
+ }
+.box-logo:hover {
+	border:1px solid white;
+ }
+.logo{
+    font-size:30px;
+    font-weight:bold;
+	width:80px; 
+	padding:13px;
+}
+.logo span{
+    color:orange;
+}
+ 
+/* box 2 */
+
+.loca-icon { height:20px;
+	
+ }
+
+#first-1 { 
+	border:1px solid transparnt;
+	padding:13px;
+	 
+ }
+ #first-1:hover { border:1px solid; 
+ }
+.first {
+	color:#cccccc;
+	font-size:15px;
+	width:80px; 
+	
+ }
+ 
+.second {
+	color:white;
+	
+ }
+ 
+ /* box 3 */
+.Search { border:1px solid transparnt;
+
+	display:flex;
+	flex:1;
+	align-center;
+	background-color:#ffbd66ff;
+	border-radius:4px;
+ }
+.Search:hover { border:2px solid #f6971fff; 
+ }
+.search-bar { flex:29;
+	border:none;
+	border-radius:4px 0px 0px 4px;
+ }
+
+.search-icon { height:40px;
+	 
+ }
+.login { display:flex;
+	
+	 font-size:17px;
+	padding:2px;
+ }
+.log { border:solid white transpernt;
+	padding:10px;
+ }
+.log:hover {border:solid white 1px;	
+ }
+
+.log img {height:41px;
+	margin:0px 10px 0px 10px;
+}
+
+.login1 { display:flex;
+	padding:2px;
+ }
+.retan {border:solid white transpernt;
+	padding:17px;
+ }
+.retan:hover {border:solid white 1px;
+ }
+
+#ret {font-size:13px;	
+ }
+#ord { font-weight:bold;
+ }
+.cart { display:flex;
+	padding:2px;
+ }
+.adcart {border:solid white transpernt;
+	padding:23px;
+	font-weight:bold;
+ }
+.adcart:hover {border:solid white 1px;
+ }
+
+* { box-sizing:border-box; 
+    margin:0%; 
+    font-family:Arial;
+}
+body {background-color: #eaeded;}
+ .box1-logo { 
+	background-color:#0f1111;
+	height:72px;
+	color:white;
+	padding:1px;
+	display:flex;
+	align-items:center;
+	
+ }
+.box-logo {
+	height:70px;
+	width:165px;
+	border:0px solid  ;
+	margin:1px 30px 1px 30px;
+ }
+.box-logo:hover {
+	border:1px solid white;
+ }
+.logo{
+    font-size:30px;
+    font-weight:bold;
+	width:80px; 
+	padding:13px;
+}
+.logo span{
+    color:orange;
+}
+ 
+/* box 2 */
+
+.loca-icon { height:20px;
+	
+ }
+
+#first-1 { 
+	border:1px solid transparnt;
+	padding:13px;
+	 
+ }
+ #first-1:hover { border:1px solid; 
+ }
+.first {
+	color:#cccccc;
+	font-size:15px;
+	width:80px; 
+	
+ }
+ 
+.second {
+	color:white;
+	
+ }
+ 
+ /* box 3 */
+.Search { border:1px solid transparnt;
+
+	display:flex;
+	flex:1;
+	align-center;
+	background-color:#ffbd66ff;
+	border-radius:4px;
+ }
+.Search:hover { border:2px solid #f6971fff; 
+ }
+.search-bar { flex:29;
+	border:none;
+	border-radius:4px 0px 0px 4px;
+ }
+
+.search-icon { height:40px;
+	 
+ }
+.login { display:flex;
+	
+	 font-size:17px;
+	padding:2px;
+ }
+.log { border:solid white transpernt;
+	padding:10px;
+ }
+.log:hover {border:solid white 1px;	
+ }
+
+.log img {height:41px;
+	margin:0px 10px 0px 10px;
+}
+
+.login1 { display:flex;
+	padding:2px;
+ }
+.retan {border:solid white transpernt;
+	padding:17px;
+ }
+.retan:hover {border:solid white 1px;
+ }
+
+#ret {font-size:13px;	
+ }
+#ord { font-weight:bold;
+ }
+.cart { display:flex;
+	padding:2px;
+ }
+.adcart {border:solid white transpernt;
+	padding:23px;
+	font-weight:bold;
+ }
+.adcart:hover {border:solid white 1px;
+ }
+
+.container {
+    display: flex;
+    padding: 20px;
+    gap: 30px;
+}
+
+/* LEFT IMAGE SECTION */
+.left {
+    display: flex;
+}
+
+.thumbnails img {
+    width: 50px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+	
+}
+
+.main-img img {
+    width: 500px;
+    margin-left: 15px;
+	 background: white;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: 0.3s;
+
+}
+.main-img img:hover {
+    transform: scale(1.07);
+}
+
+
+/* MIDDLE CONTENT */
+.middle {
+    width: 40%;
+}
+
+.middle h2 {
+    font-size: 22px;
+}
+
+.rating {
+    color: orange;
+}
+
+.price {
+    color: red;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.mrp {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.offer {
+    background: red;
+    color: white;
+    padding: 3px 8px;
+    font-size: 12px;
+    border-radius: 3px;
+}
+
+
+/* RIGHT BUY BOX */
+.right {
+    width: 250px;
+    background: white;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.right h2 {
+    margin: 0;
+}
+
+.stock {
+    color: green;
+}
+
+select {
+    width: 100%;
+    padding: 5px;
+    margin: 10px 0;
+}
+
+.cart2 {
+    width:100%;
+    padding: 10px;
+   background-color:#ffd814;
+    border: none;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+
+.buy {
+    width: 100%;
+    padding: 10px;
+    background: #ffa41c;
+    border: none;
+    cursor: pointer;
+}
+span { color:black;
+}
+
+ .row {
+            display: flex;
+            margin: 10px 0;
+        }
+
+        .label {
+            width: 30%;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .value {
+            width: 70%;
+            color: #555;
+        }
+.About { font-size:25px;
+	font-weight: bold;
+	line-height:50px;
+}
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 15px;   /* each point madhe gap */
+    line-height: 1.6;      /* line spacing */
+}
+
+/* Back to top bar */
+.top-bar {
+    background-color: #37475a;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    cursor: pointer;
+}
+
+/* Footer main */
+.footer {
+    background-color: #232f3e;
+    color: white;
+    padding: 40px 80px;
+}
+
+/* Columns */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    width: 22%;
+}
+
+.footer-column h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.footer-column p {
+    margin: 8px 0;
+    font-size: 14px;
+    color: #ddd;
+    cursor: pointer;
+}
+
+.footer-column p:hover {
+    text-decoration: underline;
+}
+	
+/* Navbar */
+.navbar {top:71px; 
+	position:sticky;
+    background: #222e3dff;
+    padding: 7px 0;
+}
+
+/* Center menu */
+.nav-menu {
+    display: flex;
+    justify-content: center; /* center alignment */
+    gap: 40px;
+}
+
+/* Links */
+.nav-menu a {font-weight:700;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+/* Hover effect */
+.nav-menu a:hover {
+    color: #ff9800;
+}
+header { top:0;
+	position:sticky;
+ }
+.input {margin-left:15px;
+	margin-top:5px;
+	background-color:black;
+	top:110px;
+	position:sticky;
+}
+</style>
+ </head>
+ <body like="orange" vlink="white">
+<header> 
+ <div class="box1-logo">
+   <div class="box-logo">
+     <div class="logo">Mini<span>Bajar</span></div>
+   </div>
+
+   <div class="address">
+   <div id="first-1"><p class="first"> Deliver to </p> <div class="second"><img src="location icon.png" class="loca-icon"> India  </div>    </div> 
+   </div>
+ <p style="color:black"> as</p>
+  <div class="Search">
+  <input placeholder="Search MiniBajar.in" class="search-bar">
+    <div class="Search icon"><img src="search icon.png" class="search-icon">  
+    </div>
+  </div>
+  <div class="login">
+	<div class="log" > <img  src="circle-user-solid.png"></div> 
+
+  </div>
+<div class="login1">
+  <div class="retan"><p id="ret"> Returns</p> <p id="ord"> & Orders </p>
+  </div></div>
+  <div class="cart">
+  <div class="adcart"> 🛒<a href="cart.html" style="color:white; text-decoration: none;">Cart  </a>
+  </div></div>
+
+ </div>
+
+</header>
+<div class="navbar">
+    <div class="nav-menu">
+           <a href="Mini Bajar1.html">Home</a>
+
+        <a href="Electronics.html">Electronics</a>
+        
+        <a href="Books.html">Books</a>
+        <a href="About.html">About</a>
+        <a href="Contact.html">Contact</a>
+
+    </div>
+</div>
+<button class="input"><a href="Mini Bajar1.html" style="color:white; text-decoration: none;"> Back </a></button>
+
+
+
+
+
+
+
+<div class="container">
+
+    <!-- LEFT -->
+    <div class="left">
+        <div class="thumbnails">
+            <img src="cook.jpg" onclick="showImage(this)"><br>
+            <img src="cook1.jpg" onclick="showImage(this)"><br>
+            <img src="cook2.jpg" onclick="showImage(this)"><br>
+            <img src="cook3.jpg" onclick="showImage(this)"><br>
+            <img src="cook4.jpg" onclick="showImage(this)"><br>
+            <img src="cook5.jpg" onclick="showImage(this)"><br>
+            <img src="cook6.jpg" onclick="showImage(this)">
+
+
+
+        </div>
+
+        <div class="main-img">
+            <img src="cook.jpg" id="bigImage">
+        </div>
+    </div>
+<script>
+function showImage(img) {
+    document.getElementById("bigImage").src = img.src;
+}
+</script>
+
+    <!-- MIDDLE -->
+    <div class="middle">
+        <h2>Cellecor Multi-Cook Kettle CMK13 Magic Chef With Steamer, Egg Tray, Idli Stand, Poacher Tray, Steel Tray, Multi Cooker Electric Kettle (1.3 L, Black)</h2>
+
+        <p class="rating">☆☆☆☆☆ (44)</p>
+
+        <span class="offer">Limited time deal</span>
+
+        <p class="price">-81% <span>₹199</span></p>
+        <p class="mrp">M.R.P: ₹2999</p>
+
+        <hr>
+    <div class="row">
+        <div class="label">Brand</div>
+        <div class="value">CELLECOR</div>
+    </div>
+
+    <div class="row">
+        <div class="label">Capacity</div>
+        <div class="value">1.3 litres</div>
+    </div>
+
+    <div class="row">
+        <div class="label">Material</div>
+        <div class="value">Metal</div>
+    </div>
+
+    <div class="row">
+        <div class="label">Colour</div>
+        <div class="value">Stainless Steel</div>
+    </div>
+
+    <div class="row">
+        <div class="label">Special Feature</div>
+        <div class="value">Heat Resistant Handle, Lightweight, Overheat Protection, Portable, Shock Resistant</div>
+    </div>
+
+    <div class="row">
+        <div class="label">Package Information</div>
+        <div class="value">Kettle</div>
+    </div>
+
+    <div class="row">
+        <div class="label">Product Dimensions</div>
+        <div class="value">18L x 24W x 24.5H Centimeters</div>
+    </div>
+
+    <div class="row">
+        <div class="label">Wattage</div>
+        <div class="value">600 Watts</div>
+    </div>
+
+    <div class="row">
+        <div class="label">Included Components</div>
+        <div class="value">1N Idly Tray, 1N Kettle, 1N Poacher Tray & Boiler, 1N Steamer & Steel Grill, 1N User Manual & Warranty Card1N Idly Tray, 1N Kettle, 1N Poacher Tray & Boiler, 1N Steamer & Steel Grill, 1N User Manual & Warranty Card</div>
+    </div>
+
+    <div class="row">
+        <div class="label">Country/Region Of Origin</div>
+        <div class="value">India</div>
+    </div>
+
+    <hr><div class="About">About this item</div>
+        <ul>
+            <li>600W Heating Power: The Cellecor Magic Chef Multi-Cook Kettle comes with a powerful 600-watt heating element that ensures quick boiling and fast cooking</li>
+            <li>Boil Dry Function: Safety meets convenience with the boil-dry protection feature. This means the Cellecor Multi-Cook Kettle automatically shuts off if there’s no water inside, protecting both the kettle’s heating system and your safety.</li>
+            <li>Concealed Heating Element: The concealed heating element makes the Magic Chef Multi-Cook Kettle easy to clean and more hygienic. It prevents scale build-up and allows even heating, making it perfect for preparing a variety of meals.</li>
+            <li>Auto-Cut Off Feature: Forget the worry of overcooking or overheating. The auto cut-off function ensures the Cellecor Magic Chef Kettle powers off once your food or water reaches the desired temperature.
+</li>
+            <li>Variable Temperature Control: Tailor your cooking with adjustable temperature control. From gentle warming to full boiling, the Cellecor Multi-Cook Kettle lets you choose the ideal setting for tea, coffee, soups, or hot beverages, making it your versatile kitchen companion.
+</li>
+        </ul>
+<hr>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="right">
+        <h2>₹199</h2>
+        <p>FREE Delivery</p>
+
+        <p class="stock">In stock</p>
+
+        <label>Quantity:</label>
+        <select>
+            <option>1</option>
+            <option>2</option>
+        </select>
+
+        <button class="cart2" onclick="addToCart('Cellecor Multi-Cook Kettle',199,'cook.jpg')">Add to Cart</button>
+       <button class="buy" onclick="buyNow('Cellecor Multi-Cook Kettle',199,'cook.jpg')">Buy Now</button>
+    </div>
+
+</div>
+<script>
+function buyNow(name, price, image){
+
+    let buyProduct = [{
+        name: name,
+        price: price,
+        image: image
+    }];
+
+    localStorage.setItem("cart", JSON.stringify(buyProduct));
+
+    window.location.href = "Address.html";
+}
+
+function addToCart(name, price, image) {
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    cart.push({name, price, image});
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    alert("Added to Cart!");
+    window.location.href = "cart.html"; 
+}
+</script>
+
+<!-- Back to top -->
+<div class="top-bar">
+    Back to top
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <div class="footer-container">
+
+        <div class="footer-column">
+            <h3>Get to Know Us</h3>
+            <p>About Mini Bajar</p>
+            <p>Careers</p>
+            <p>Press Releases</p>
+            <p>Mini Bajar Science</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Connect with Us</h3>
+            <p><i class="fa-brands fa-square-facebook" style="color: #ffffff;"></i>Facebook</p>
+            <p>Twitter</p>
+            <p>Instagram</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Make Money with Us</h3>
+            <p>Sell on Mini Bajar</p>
+            <p>Sell under Mini Bajar Accelerator</p>
+            <p>Protect and Build Your Brand</p>
+            <p>Mini Bajar Global Selling</p>
+            <p>Supply to Mini Bajar</p>
+            <p>Become an Affiliate</p>
+            <p>Fulfilment by Mini Bajar</p>
+            <p>Advertise Your Products</p>
+            <p>Mini Bajar Pay on Merchants</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Let Us Help You</h3>
+            <p>Your Account</p>
+            <p>Returns Centre</p>
+            <p>Recalls and Product Safety Alerts</p>
+            <p>100% Purchase Protection</p>
+            <p>Mini Bajar App Download</p>
+            <p>Help</p>
+        </div>
+
+    </div>
+</div>
+
+<script>
+document.querySelector(".top-bar").onclick = function() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+};
+</script>
+
+</body>
+</html>

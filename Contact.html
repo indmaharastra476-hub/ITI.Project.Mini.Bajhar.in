@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Contact Us</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #f5f5f5;
+}
+* { box-sizing:border-box; 
+    margin:0%; 
+    font-family:Arial;
+}
+body {background-color: #eaeded;}
+ .box1-logo { 
+	background-color:#0f1111;
+	height:72px;
+	color:white;
+	padding:1px;
+	display:flex;
+	align-items:center;
+	
+ }
+.box-logo {
+	height:70px;
+	width:165px;
+	border:0px solid  ;
+	margin:1px 30px 1px 30px;
+ }
+.box-logo:hover {
+	border:1px solid white;
+ }
+.logo{
+    font-size:30px;
+    font-weight:bold;
+	width:80px; 
+	padding:13px;
+}
+.logo span{
+    color:orange;
+}
+ 
+/* box 2 */
+
+.loca-icon { height:20px;
+	
+ }
+
+#first-1 { 
+	border:1px solid transparnt;
+	padding:13px;
+	 
+ }
+ #first-1:hover { border:1px solid; 
+ }
+.first {
+	color:#cccccc;
+	font-size:15px;
+	width:80px; 
+	
+ }
+ 
+.second {
+	color:white;
+	
+ }
+ 
+ /* box 3 */
+.Search { border:1px solid transparnt;
+
+	display:flex;
+	flex:1;
+	align-center;
+	background-color:#ffbd66ff;
+	border-radius:4px;
+ }
+.Search:hover { border:2px solid #f6971fff; 
+ }
+.search-bar { flex:29;
+	border:none;
+	border-radius:4px 0px 0px 4px;
+ }
+
+.search-icon { height:40px;
+	 
+ }
+.login { display:flex;
+	
+	 font-size:17px;
+	padding:2px;
+ }
+.log { border:solid white transpernt;
+	padding:10px;
+ }
+.log:hover {border:solid white 1px;	
+ }
+
+.log img {height:41px;
+	margin:0px 10px 0px 10px;
+}
+
+.login1 { display:flex;
+	padding:2px;
+ }
+.retan {border:solid white transpernt;
+	padding:17px;
+ }
+.retan:hover {border:solid white 1px;
+ }
+
+#ret {font-size:13px;	
+ }
+#ord { font-weight:bold;
+ }
+.cart { display:flex;
+	padding:2px;
+ }
+.adcart {border:solid white transpernt;
+	padding:23px;
+	font-weight:bold;
+ }
+.adcart:hover {border:solid white 1px;
+ }
+.input {margin-left:15px;
+	margin-top:5px;
+	background-color:black;
+}
+
+
+
+/* Navbar */
+.navbar {
+            background: #222e3dff;
+    padding: 7px 0;
+            top:71px; 
+            position:sticky;
+}
+
+/* Center menu */
+.nav-menu {
+    display: flex;
+    justify-content: center; /* center alignment */
+    gap: 40px;
+}
+
+/* Links */
+.nav-menu a {font-weight:700;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+/* Hover effect */
+.nav-menu a:hover {
+    color: #ff9800;
+}
+
+
+
+
+/* Header Styling */
+        .header-section { text-align: center; margin-bottom: 30px; }
+        .contact-us-title { color: #ff0000; font-size: 20px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; display: flex; align-items: center; justify-content: center; gap: 10px; }
+        .contact-us-title::before, .contact-us-title::after { content: ""; width: 40px; height: 2px; background: #ff0000; }
+        h1 { font-size: 45px; color: #1a237e; margin-top: 10px; }
+
+       .contact-container { 
+            display: flex; 
+            gap: 50px; 
+            background: white; 
+            padding: 50px; 
+            border-radius: 12px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            flex: 1; 
+            align-items: stretch; 
+        }
+
+
+        /* Form Styling */
+        .form-section { flex: 2; display: flex; flex-direction: column; justify-content: space-between; }
+        .input-group { display: flex; gap: 20px; margin-bottom: 25px; }
+        
+       #Name, select, textarea { 
+            width: 100%; 
+            padding: 18px; 
+            border: 1px solid #ddd; 
+            border-radius: 6px; 
+            outline: none; 
+            font-size: 16px; 
+            color: #333; 
+            background: #fafafa;
+        }
+        textarea { flex: 1; min-height: 200px; resize: none; margin-bottom: 20px; }
+        
+        .send-btn { 
+            width: 100%; 
+            background-color: #ff0000; 
+            color: white; 
+            border: none; 
+            padding: 20px; 
+            font-size: 18px; 
+            font-weight: 700; 
+            cursor: pointer; 
+            border-radius: 6px; 
+            transition: 0.3s; 
+        }
+        .send-btn:hover { background-color: #cc0000; transform: translateY(-2px); }
+
+        /* Info Styling */
+        .info-section { 
+            flex: 1; 
+            border-left: 1px solid #eee; 
+            padding-left: 50px; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+        }
+        .info-item { margin-bottom: 35px; }
+        .info-label { color: #ff0000; font-weight: 700; font-size: 20px; margin-bottom: 8px; }
+        .info-text { color: #444; font-size: 17px; line-height: 1.6; }
+
+        /* Mobile Responsive */
+        @media (max-width: 900px) {
+            body { padding: 20px; }
+            .contact-container { flex-direction: column; }
+            .info-section { border-left: none; padding-left: 0; border-top: 1px solid #eee; padding-top: 40px; }
+            .input-group { flex-direction: column; gap: 15px; }
+            h1 { font-size: 32px; }
+        }
+
+        header {
+            top:0; 
+            position:sticky;
+            z-index: 1000;
+        }
+
+
+
+/* Back to top bar */
+.top-bar {
+    background-color: #37475a;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    cursor: pointer;
+}
+
+/* Footer main */
+.footer {
+    background-color: #232f3e;
+    color: white;
+    padding: 40px 80px;
+}
+
+/* Columns */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    width: 22%;
+}
+
+.footer-column h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.footer-column p {
+    margin: 8px 0;
+    font-size: 14px;
+    color: #ddd;
+    cursor: pointer;
+}
+
+.footer-column p:hover {
+    text-decoration: underline;
+}
+.input {margin-left:15px;
+	margin-top:5px;
+	background-color:black;
+	top:110px;
+	position:sticky;
+}
+
+</style>
+</head>
+
+ <body like="orange" vlink="white">
+
+<header> 
+ <div class="box1-logo">
+   <div class="box-logo">
+     <div class="logo">Mini<span>Bajar</span></div>
+   </div>
+
+   <div class="address">
+   <div id="first-1"><p class="first"> Deliver to </p> <div class="second"><img src="location icon.png" class="loca-icon"> India  </div>    </div> 
+   </div>
+ <p style="color:black"> as</p>
+  <div class="Search">
+  <input placeholder="Search MiniBajar.in" class="search-bar">
+    <div class="Search icon"><img src="search icon.png" class="search-icon">  
+    </div>
+  </div>
+  <div class="login">
+	<div class="log" > <img  src="circle-user-solid.png"></div> 
+
+  </div>
+<div class="login1">
+  <div class="retan"><p id="ret"> Returns</p> <p id="ord"> & Orders </p>
+  </div></div>
+  <div class="cart">
+  <div class="adcart"> 🛒<a href="cart.html" style="color:white; text-decoration: none;">Cart  </a>
+  </div></div>
+
+ </div>
+
+</header>
+
+<!-- Navbar -->
+<div class="navbar">
+    <div class="nav-menu">
+           <a href="Mini Bajar1.html">Home</a>
+
+        <a href="Electronics.html">Electronics</a>
+        
+        <a href="Books.html">Books</a>
+        <a href="About.html">About</a>
+        <a href="Contact.html">Contact</a>
+    </div>
+</div>
+<button class="input"><a href="Mini Bajar1.html" style="color:white; text-decoration: none;"> Back </a></button>
+
+
+
+<br><br>
+    <div class="header-section">
+        <div class="contact-us-title">Contact Us</div>
+        <h1>Enquiry Form</h1>
+    </div>
+
+    <div class="contact-container">
+        <!-- Form Section -->
+        <div class="form-section">
+            <form action="#" style="display: flex; flex-direction: column; height: 100%;">
+                <div class="input-group">
+                    <input type="text" placeholder="Name of the candidate" id="Name" required>
+                    <input type="number" placeholder="Age" id="Name" required>
+                </div>
+                <div class="input-group">
+                    <select required>
+                        <option value="" disabled selected>Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <textarea placeholder="If trained please share your Experience"></textarea>
+                <button type="submit" class="send-btn">Send Message</button>
+            </form>
+        </div>
+
+        <!-- Info Section -->
+        <div class="info-section">
+            <div class="info-item">
+                <p class="info-label">Address</p>
+                <p class="info-text">Armori Road, <br>Desaiganj - 441207</p>
+            </div>
+            <div class="info-item">
+                <p class="info-label">Telephone No.:</p>
+                <p class="info-text">033-25396744</p>
+            </div>
+            <div class="info-item">
+                <p class="info-label">Urgent call on:</p>
+                <p class="info-text">9432127262 / 8250729381</p>
+            </div>
+            <div class="info-item">
+                <p class="info-label">Email</p>
+                <p class="info-text">info@minibajar.co.in</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+<!-- Back to top -->
+<div class="top-bar">
+    Back to top
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <div class="footer-container">
+
+        <div class="footer-column">
+            <h3>Get to Know Us</h3>
+            <p>About Mini Bajar</p>
+            <p>Careers</p>
+            <p>Press Releases</p>
+            <p>Mini Bajar Science</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Connect with Us</h3>
+            <p><i class="fa-brands fa-square-facebook" style="color: #ffffff;"></i>Facebook</p>
+            <p>Twitter</p>
+            <p>Instagram</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Make Money with Us</h3>
+            <p>Sell on Mini Bajar</p>
+            <p>Sell under Mini Bajar Accelerator</p>
+            <p>Protect and Build Your Brand</p>
+            <p>Mini Bajar Global Selling</p>
+            <p>Supply to Mini Bajar</p>
+            <p>Become an Affiliate</p>
+            <p>Fulfilment by Mini Bajar</p>
+            <p>Advertise Your Products</p>
+            <p>Mini Bajar Pay on Merchants</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Let Us Help You</h3>
+            <p>Your Account</p>
+            <p>Returns Centre</p>
+            <p>Recalls and Product Safety Alerts</p>
+            <p>100% Purchase Protection</p>
+            <p>Mini Bajar App Download</p>
+            <p>Help</p>
+        </div>
+
+    </div>
+</div>
+
+<script>
+document.querySelector(".top-bar").onclick = function() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+};
+</script>
+
+
+</body>
+</html>
