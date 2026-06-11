@@ -1,0 +1,1413 @@
+<! DOCTYPE html>
+<html>
+ <head>
+  <title>Shoes </title>
+<style>
+* { box-sizing:border-box; 
+    margin:0%; 
+    font-family:Arial;
+}
+body {background-color:#e3e3e3ff;}
+ .box1-logo { 
+	background-color:#0f1111;
+	height:72px;
+	color:white;
+	padding:1px;
+	display:flex;
+	align-items:center;
+	
+ }
+
+        header {
+            top:0; 
+            position:sticky;
+            z-index: 1000;
+        }
+
+        .box-logo {
+            height:70px;
+            width:165px;
+            border:0px solid;
+            margin:1px 30px 1px 30px;
+        }
+        .box-logo:hover {
+            border:1px solid white;
+        }
+        .logo{
+            font-size:30px;
+            font-weight:bold;
+            width:80px; 
+            padding:13px;
+        }
+        .logo span{
+            color:orange;
+        }
+        
+        /* box 2 */
+        .loca-icon { height:20px; }
+
+        #first-1 { 
+            border:1px solid transparent;
+            padding:13px;
+        }
+        #first-1:hover { border:1px solid white; }
+        
+        .first {
+            color:#cccccc;
+            font-size:15px;
+            width:80px; 
+        }
+        
+        .second { color:white; }
+        
+        /* box 3 */
+        .Search { 
+            border:1px solid transparent;
+            display:flex;
+            flex:1;
+            align-items:center;
+            background-color:#ffbd66ff;
+            border-radius:4px;
+            height: 40px;
+        }
+        .Search:hover { border:2px solid #f6971fff; }
+        .search-bar { 
+            flex:29;
+            border:none;
+            border-radius:4px 0px 0px 4px;
+            height: 100%;
+            padding: 10px;
+            outline: none;
+        }
+
+        .search-icon { height:40px; cursor: pointer; }
+        
+        .login { display:flex; font-size:17px; padding:2px; }
+        .log { border:1px solid transparent; padding:10px; cursor: pointer; }
+        .log:hover { border:1px solid white; }
+        .log img { height:41px; margin:0px 10px 0px 10px; }
+
+        .login1 { display:flex; padding:2px; }
+        .retan { border:1px solid transparent; padding:17px; cursor: pointer; }
+        .retan:hover { border:1px solid white; }
+
+        #ret { font-size:13px; }
+        #ord { font-weight:bold; }
+        
+        .cart { display:flex; padding:2px; }
+        .adcart { border:1px solid transparent; padding:23px; font-weight:bold; cursor: pointer; }
+        .adcart:hover { border:1px solid white; }
+        .adcart a { color: white; text-decoration: none; }
+
+        /* Navbar */
+        .navbar {
+            top:71px; 
+            position:sticky;
+            background: #222e3dff;
+            padding: 7px 0;
+            z-index: 999;
+        }
+
+        .nav-menu {
+            display: flex;
+            justify-content: center; 
+            gap: 40px;
+        }
+
+        .nav-menu a {
+            font-weight:700;
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            transition: 0.3s;
+        }
+        .nav-menu a:hover { color: #ff9800; }
+
+
+
+
+
+
+.Shop-Now {  display: flex;
+	
+	
+	
+ }
+.Left-shop {
+	width:8%;
+ }
+
+.Center-shop { width:100%;
+
+
+
+ }
+/* TOP PRODUCTS */
+
+.top-products{
+    display:flex;
+    gap:15px;
+    margin:20px;
+}
+
+
+.small-card{
+    width:600px;
+    background:white;
+    border:1px solid #ddd;
+    display:flex;
+    padding:10px;
+    border-radius:3px;
+}
+
+.small-card img{
+    width:230px;
+    height:230px;
+    object-fit:contain;
+}
+
+.small-details{
+    padding-left:20px;
+    padding-top:30px;
+}
+
+.small-details h3{
+    font-size:18px;
+    font-weight:500;
+    color:#0f1111;
+    line-height:28px;
+    margin-bottom:10px;
+}
+
+.rating-line{
+    display:flex;
+    align-items:center;
+    gap:4px;
+    margin-bottom:10px;
+}
+
+.rate{
+    font-size:15px;
+}
+
+.stars{
+    color:#ff9900;
+    font-size:15px;
+}
+
+.count{
+    color:#565959;
+    font-size:15px;
+}
+
+.price{    font-weight:bold;
+    font-size:35px;
+    margin-bottom:5px;
+}
+
+.mrp{
+    color:#565959;
+    font-size:14px;
+}
+
+.mrp span{
+    text-decoration:line-through;
+}
+
+.prime{padding-bottom:10px;
+    margin-top:10px;
+    color:#007185;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.prime-tick{
+    color:#ff6a00;
+    font-size:18px;
+    margin-right:2px;
+}
+
+
+
+
+
+
+
+
+button {
+	margin-bottom: 5px;
+    background: #f7ca00;
+    color: black;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    border-radius: 5px;
+    font-weight: bold;
+font-size:15px;
+}
+
+.buy {background-color:orange;
+	margin-bottom: 2px;
+color: white;
+
+ }
+
+
+
+.Right-shop {
+	width:8%;
+ }
+h1 { text-align:center;
+	font-size:50px;
+padding-bottom:20px;
+}
+
+
+
+
+
+
+
+
+
+
+/* Back to top bar */
+.top-bar {
+    background-color: #37475a;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    cursor: pointer;
+}
+
+/* Footer main */
+.footer {
+    background-color: #232f3e;
+    color: white;
+    padding: 40px 80px;
+}
+
+/* Columns */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    width: 22%;
+}
+
+.footer-column h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.footer-column p {
+    margin: 8px 0;
+    font-size: 14px;
+    color: #ddd;
+    cursor: pointer;
+}
+
+.footer-column p:hover {
+    text-decoration: underline;
+}
+.input {margin-left:15px;
+	margin-top:5px;
+	background-color:black;
+	top:110px;
+	position:sticky;
+	width:80px;
+}
+
+
+
+
+
+
+
+
+.product-list{
+    width:100%;
+}
+
+.big-product-card{
+    background:white;
+    border:1px solid #ddd;
+    margin-bottom:12px;
+    display:flex;
+    padding:10px;
+}
+
+.product-image{
+    width:300px;
+    height:300px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.product-image img{
+    width:300px;
+    height:300px;
+    object-fit:contain;
+}
+
+.product-details{
+
+    flex:1;
+    padding:20px;
+}
+
+.sponsored{
+    color:#666;
+    font-size:13px;
+    margin-bottom:5px;
+}
+
+.product-details h2{
+    font-size:18px;
+    font-weight:500;
+    line-height:30px;
+    margin-bottom:8px;
+}
+
+.rating-row{
+    display:flex;
+    align-items:center;
+    gap:5px;
+    margin-bottom:10px;
+}
+
+.stars{
+    color:#ff9900;
+}
+
+.reviews{
+    color:#007185;
+}
+
+.deal{
+    background:#cc0c39;
+    color:white;
+    display:inline-block;
+    padding:5px 10px;
+    font-size:14px;
+    font-weight:bold;
+    margin-bottom:12px;
+}
+
+.price-row{
+    margin-bottom:10px;
+}
+
+
+.old-price{
+    text-decoration:line-through;
+    color:#666;
+}
+
+.off{
+    font-size:20px;
+}
+
+.bank-offer{
+    margin-bottom:10px;
+    color:#444;
+}
+
+.delivery{
+
+            background: #dff1f1;
+            padding: 5px 10px;
+            border-radius: 4px;
+            display: inline-block;
+	
+    margin-bottom:10px;
+    font-size:18px;
+}
+
+.cart-btn{
+    background:#ffd814;
+    border:none;
+    padding:12px 40px;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.cart-btn:hover{
+    background:#f7ca00;
+}
+
+.bought{
+    margin-bottom:10px;
+    color:#565959;
+}
+
+
+
+
+
+
+
+
+.buy-box{
+    width:300px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    padding:15px;
+    height:fit-content;
+    background:#fff;
+}
+
+.buy-price{
+    font-size:35px;
+    margin-bottom:15px;
+}
+
+.free{
+    font-size:20px;
+    margin-bottom:8px;
+}
+
+.stock{
+    color:green;
+    font-size:20px;
+    margin-bottom:10px;
+}
+
+.buy-box label{
+    font-size:20px;
+}
+
+.buy-box select{
+    width:100%;
+    height:40px;
+    margin-top:10px;
+    margin-bottom:15px;
+    font-size:18px;
+}
+
+
+</style>
+<script>
+function addToCart(name, price, image) {
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    cart.push({name, price, image});
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    alert("Added to Cart!");
+    window.location.href = "cart.html"; 
+}
+
+function buyNow(name, price, image){
+
+    let buyProduct = [{
+        name: name,
+        price: price,
+        image: image
+    }];
+
+    localStorage.setItem("cart", JSON.stringify(buyProduct));
+
+    window.location.href = "Address.html";
+}
+</script>
+
+
+
+
+
+ </head>
+ <body>
+
+<header> 
+ <div class="box1-logo">
+   <div class="box-logo">
+     <div class="logo">Mini<span>Bajar</span></div>
+   </div>
+
+   <div class="address">
+       <div id="first-1">
+           <p class="first"> Deliver to </p> 
+           <div class="second"><img src="location icon.png" class="loca-icon"> India </div>    
+       </div> 
+   </div>
+   <p style="color:black"> as</p>
+   
+   <div class="Search">
+       <input placeholder="Search MiniBajar.in" class="search-bar">
+       <div class="Search icon"><img src="search icon.png" class="search-icon"></div>
+   </div>
+   
+   <div class="login">
+       <div class="log"><a href="Profile.html"><img src="circle-user-solid.png"></a></div> 
+   </div>
+   
+   <div class="login1">
+       <div class="retan"><p id="ret"> Returns</p> <p id="ord"> & Orders </p></div>
+   </div>
+   
+   <div class="cart">
+       <div class="adcart">🛒<a href="cart.html" style="color:white; text-decoration: none;">Cart</a></div>
+   </div>
+ </div>
+</header>
+
+<div class="navbar">
+    <div class="nav-menu">
+           <a href="Mini Bajar1.html">Home</a>
+
+        <a href="Electronics.html">Electronics</a>
+        
+        <a href="Books.html">Books</a>
+        <a href="About.html">About</a>
+        <a href="Contact.html">Contact</a>
+    </div>
+</div>
+<button class="input"><a href="Mini Bajar1.html" style="color:white; text-decoration: none;"> Back </a></button>
+
+
+
+
+
+
+
+
+
+
+
+
+<h1>Apex Laptops</h1>
+
+
+
+<div class="top-products">
+
+    <!-- Product 1 -->
+<div class="small-card">
+
+    <a href="Apply.html"><img src="lap2.png"></a>
+
+    <div class="small-details">
+
+        <h3>
+            Apple 2026 MacBook Neo 13”
+            Laptop with A18 Pro chip...
+        </h3>
+
+        <div class="rating-line">
+            <span class="rate">4.8</span>
+
+            <span class="stars">
+                ★★★★★
+            </span>
+
+            <span class="count">
+                (104)
+            </span>
+        </div>
+
+        <div class="price">
+            ₹39,999
+        </div>
+
+        <div class="mrp">
+            M.R.P:
+            <span>₹79,900.00</span>
+        </div>
+
+        <div class="prime">
+            <span class="prime-tick">✔</span>prime
+        </div>
+
+    </div>
+
+</div>
+
+
+
+    <!-- Product 2 -->
+<div class="small-card">
+
+    <img src="lap3.png">
+
+    <div class="small-details">
+
+        <h3>
+            Apple 2026 MacBook Air 13″ Laptop with M5 chip...
+        </h3>
+
+        <div class="rating-line">
+            <span class="rate">4.7</span>
+
+            <span class="stars">
+                ★★★★★
+            </span>
+
+            <span class="count">
+                (109)
+            </span>
+        </div>
+
+        <div class="price">
+            ₹41,999
+        </div>
+
+        <div class="mrp">
+            M.R.P:
+            <span>₹82,900.00</span>
+        </div>
+
+        <div class="prime">
+            <span class="prime-tick">✔</span>prime
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+    <!-- Product 3 -->
+<div class="small-card">
+
+    <a href="Apple.html"><img src="lap4.png"></a>
+
+    <div class="small-details">
+
+        <h3>
+            Apple 2026 MacBook Pro Laptop with M5 Max chip...
+        </h3>
+
+        <div class="rating-line">
+            <span class="rate">4.3</span>
+
+            <span class="stars">
+                ★★★★★
+            </span>
+
+            <span class="count">
+                (106)
+            </span>
+        </div>
+
+        <div class="price">
+            ₹99,999
+        </div>
+
+        <div class="mrp">
+            M.R.P:
+            <span>₹4,99,900.00</span>
+        </div>
+
+        <div class="prime">
+            <span class="prime-tick">✔</span>prime
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+    <div class="Shop-Now">
+    <div class="Left-shop">
+
+
+    </div>
+<div class="Center-shop">
+<div class="product-list">
+
+    <!-- Product 1 -->
+<div class="big-product-card">
+
+    <!-- IMAGE -->
+
+    <div class="product-image">
+        <a href="Hp laptop.html"><img src="lap1.png"></a>
+    </div>
+
+
+
+
+
+    <!-- DETAILS -->
+
+    <div class="product-details">
+
+
+<br>
+        <h2>
+           HP Omnibook 3, Snapdragon X Processor, 45 TOPS (16GB LPDDR5x, 512GB SSD) 2K, WUXGA, IPS, 14''/35.6cm, Win 11, Office 24, Silver, 1.4kg, hz0026QU, FHD IR Camera, 42% Lighter mini GaN Charger, AI Laptop
+        </h2>
+
+        <div class="rating-row">
+            <span>3.1</span>
+            <span class="stars">★★★★☆</span>
+            <span class="reviews">(2)</span>
+        </div>
+
+        <div class="deal">
+            Limited time deal
+        </div>
+
+        <div class="price-row">
+
+            <span class="price">
+                ₹38,900
+            </span>
+<br>
+            <span class="old-price">
+                ₹1,08,510
+            </span>
+
+            <span class="off">
+                (75% off)
+            </span>
+
+        </div>
+
+
+
+        <p class="delivery">
+            FREE delivery 
+        </p>
+
+    </div>
+
+
+    <!-- RIGHT BOX -->
+
+    <div class="buy-box">
+
+        <div class="price">
+            ₹38,900
+        </div>
+
+        <p class="free">
+            FREE Delivery
+        </p>
+
+        <p class="stock">
+            In stock
+        </p>
+
+        <label>
+            Quantity:
+        </label>
+
+        <select>
+            <option selected>1</option>
+            <option >2</option>
+            <option>3</option>
+            <option>4</option>
+        </select>
+
+        <button onclick="addToCart('HP Omnibook 3',38900,'lap1.png')">
+            Add to Cart
+        </button>
+
+        <button class="buy" onclick="buyNow('HP Omnibook 3',38900,'lap1.png')">
+            Buy Now
+        </button>
+
+    </div>
+
+</div>
+
+
+
+
+    <!-- Product 2 -->
+<div class="big-product-card">
+
+    <!-- IMAGE -->
+
+    <div class="product-image">
+        <img src="lap5.png">
+    </div>
+
+
+
+
+
+    <!-- DETAILS -->
+
+    <div class="product-details">
+
+        
+<br>
+        <h2>
+            Lenovo ThinkBook 16, Intel Core Ultra 9 185H, 16GB RAM, 512GB SSD, WUXGA IPS 16” (40.64cm), Win 11 Home, Arctic Grey, 1.7Kg, 21SKA0J5IG, Fingerprint, Backlit, 300 Nits, 1Y Warranty, AI Powered Laptop
+        </h2>
+
+        <div class="rating-row">
+            <span>3.7</span>
+            <span class="stars">★★★★☆</span>
+            <span class="reviews">(4)</span>
+        </div>
+
+        <div class="deal">
+            Limited time deal
+        </div>
+
+        <div class="price-row">
+
+            <span class="price">
+                ₹47,999
+            </span>
+<br>	
+            <span class="old-price">
+                ₹1,48,510
+            </span>
+
+            <span class="off">
+                (80% off)
+            </span>
+
+        </div>
+
+        <p class="delivery">
+            FREE delivery 
+        </p>
+    </div>
+
+    <!-- RIGHT BOX -->
+    <div class="buy-box">
+        <div class="price">
+            ₹47,999
+        </div>
+
+        <p class="free">
+            FREE Delivery
+        </p>
+
+        <p class="stock">
+            In stock
+        </p>
+
+        <label>
+            Quantity:
+        </label>
+
+        <select>
+            <option selected>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+        </select>
+
+        <button onclick="addToCart('Lenovo ThinkBook 16',47999,'lap5.png')">
+            Add to Cart
+        </button>
+
+        <button class="buy" onclick="buyNow('Lenovo ThinkBook 16',47999,'lap5.png')">
+            Buy Now
+        </button>
+
+    </div>
+
+</div>
+
+
+
+    <!-- Product 3 -->
+<div class="big-product-card">
+
+    <!-- IMAGE -->
+
+    <div class="product-image">
+        <img src="lap6.png">
+    </div>
+
+
+
+
+
+    <!-- DETAILS -->
+
+    <div class="product-details">
+
+
+<br>
+        <h2>
+           HP OmniBook X Flip OLED (Previously Envy) Intel Core Ultra 5 226V, 40 Tops (16GB LPDDR5x,1TB SSD) 3K, Touch, 120hz,14''/35.6cm, Win11, Office24, Meteor Silver, 1.38kg, fm0099TU,Pen, Next Gen AI Laptop
+        </h2>
+
+        <div class="rating-row">
+            <span>4.1</span>
+            <span class="stars">★★★★☆</span>
+            <span class="reviews">(5)</span>
+        </div>
+
+        <div class="deal">
+            Limited time deal
+        </div>
+
+        <div class="price-row">
+
+            <span class="price">
+                ₹58,990
+            </span>
+<br>
+            <span class="old-price">
+                ₹1,28,510
+            </span>
+
+            <span class="off">
+                (81% off)
+            </span>
+
+        </div>
+
+
+
+        <p class="delivery">
+            FREE delivery 
+        </p>
+
+    </div>
+
+
+    <!-- RIGHT BOX -->
+
+    <div class="buy-box">
+
+        <div class="price">
+            ₹58,900
+        </div>
+
+        <p class="free">
+            FREE Delivery
+        </p>
+
+        <p class="stock">
+            In stock
+        </p>
+
+        <label>
+            Quantity:
+        </label>
+
+        <select>
+            <option selected>1</option>
+            <option >2</option>
+            <option>3</option>
+            <option>4</option>
+        </select>
+
+        <button onclick="addToCart('HP OmniBook X Flip OLED (Previously Envy) Intel Core Ultra 5 226V',58900,'lap6.png')">
+            Add to Cart
+        </button>
+
+        <button class="buy" onclick="buyNow('HP OmniBook X Flip OLED (Previously Envy) Intel Core Ultra 5 226V',58900,'lap6.png')">
+            Buy Now
+        </button>
+
+    </div>
+
+</div>
+
+
+    <!-- Product 4 -->
+<div class="big-product-card">
+
+    <!-- IMAGE -->
+
+    <div class="product-image">
+        <img src="lap7.png">
+    </div>
+
+
+
+
+
+    <!-- DETAILS -->
+
+    <div class="product-details">
+
+
+<br>
+        <h2>
+           ASUS Vivobook 15, Smartchoice,Intel Core i3 13th Gen 1315U, 12GB RAM, 512GB SSD, FHD 15.6", Win 11, Office 2024, Quiet Blue, 1.7Kg, X1504VA-BQ332WS, Intel UHD iGPU, M365 Basic (1Year)*, 42Whrs Laptop
+        </h2>
+
+        <div class="rating-row">
+            <span>3.7</span>
+            <span class="stars">★★★★☆</span>
+            <span class="reviews">(3)</span>
+        </div>
+
+        <div class="deal">
+            Limited time deal
+        </div>
+
+        <div class="price-row">
+
+            <span class="price">
+                ₹25,990
+            </span>
+<br>
+            <span class="old-price">
+                ₹58,999
+            </span>
+
+            <span class="off">
+                (79% off)
+            </span>
+
+        </div>
+
+
+
+        <p class="delivery">
+            FREE delivery 
+        </p>
+
+    </div>
+
+
+    <!-- RIGHT BOX -->
+
+    <div class="buy-box">
+
+        <div class="price">
+            ₹25,900
+        </div>
+
+        <p class="free">
+            FREE Delivery
+        </p>
+
+        <p class="stock">
+            In stock
+        </p>
+
+        <label>
+            Quantity:
+        </label>
+
+        <select>
+            <option selected>1</option>
+            <option >2</option>
+            <option>3</option>
+            <option>4</option>
+        </select>
+
+        <button onclick="addToCart('ASUS Vivobook 15',25900,'lap7.png')">
+            Add to Cart
+        </button>
+
+        <button class="buy" onclick="buyNow('ASUS Vivobook 15',25900,'lap7.png')">
+            Buy Now
+        </button>
+
+    </div>
+
+</div>
+
+
+    <!-- Product 5 -->
+<div class="big-product-card">
+
+    <!-- IMAGE -->
+
+    <div class="product-image">
+        <img src="lap8.png">
+    </div>
+
+
+
+
+
+    <!-- DETAILS -->
+
+    <div class="product-details">
+
+
+<br>
+        <h2>
+           acer SmartChoice Aspire Lite, AMD Ryzen 5-5625U Processor, 16 GB/512 GB, Full HD, 15.6"/39.62 cm, Windows 11 Home, Steel Gray, 1.59 kg, AL15-41, Metal Body, Thin and Light Laptop
+        </h2>
+
+        <div class="rating-row">
+            <span>2.9</span>
+            <span class="stars">★★★★☆</span>
+            <span class="reviews">(3)</span>
+        </div>
+
+        <div class="deal">
+            Limited time deal
+        </div>
+
+        <div class="price-row">
+
+            <span class="price">
+                ₹23,999
+            </span>
+<br>
+            <span class="old-price">
+                ₹52,499
+            </span>
+
+            <span class="off">
+                (78% off)
+            </span>
+
+        </div>
+
+
+
+        <p class="delivery">
+            FREE delivery 
+        </p>
+
+    </div>
+
+
+    <!-- RIGHT BOX -->
+
+    <div class="buy-box">
+
+        <div class="price">
+            ₹23,999
+        </div>
+
+        <p class="free">
+            FREE Delivery
+        </p>
+
+        <p class="stock">
+            In stock
+        </p>
+
+        <label>
+            Quantity:
+        </label>
+
+        <select>
+            <option selected>1</option>
+            <option >2</option>
+            <option>3</option>
+            <option>4</option>
+        </select>
+
+        <button onclick="addToCart('acer SmartChoice Aspire Lite',23999,'lap8.png')">
+            Add to Cart
+        </button>
+
+        <button class="buy" onclick="buyNow('acer SmartChoice Aspire Lite',23999,'lap8.png')">
+            Buy Now
+        </button>
+
+    </div>
+
+</div>
+
+
+
+
+    <!-- Product 6 -->
+<div class="big-product-card">
+
+    <!-- IMAGE -->
+
+    <div class="product-image">
+        <img src="lap9.png">
+    </div>
+
+
+
+
+
+    <!-- DETAILS -->
+
+    <div class="product-details">
+
+
+<br>
+        <h2>
+           Dell 15 Laptop DC15250-15.6-inch FHD 120Hz Display, 13th Gen Intel Core i7-1355U, 16GB DDR4 RAM, 512GB SSD, Intel UHD Graphics, Windows 11 Home, Onsite Service - Platinum Silver
+        </h2>
+
+        <div class="rating-row">
+            <span>3.8</span>
+            <span class="stars">★★★★☆</span>
+            <span class="reviews">(6)</span>
+        </div>
+
+        <div class="deal">
+            Limited time deal
+        </div>
+
+        <div class="price-row">
+
+            <span class="price">
+                ₹35,990
+            </span>
+<br>
+            <span class="old-price">
+                ₹99,990
+            </span>
+
+            <span class="off">
+                (75% off)
+            </span>
+
+        </div>
+
+
+
+        <p class="delivery">
+            FREE delivery 
+        </p>
+
+    </div>
+
+
+    <!-- RIGHT BOX -->
+
+    <div class="buy-box">
+
+        <div class="price">
+            ₹35,900
+        </div>
+
+        <p class="free">
+            FREE Delivery
+        </p>
+
+        <p class="stock">
+            In stock
+        </p>
+
+        <label>
+            Quantity:
+        </label>
+
+        <select>
+            <option selected>1</option>
+            <option >2</option>
+            <option>3</option>
+            <option>4</option>
+        </select>
+
+        <button onclick="addToCart('Dell 15 Laptop DC15250-15.6-inch FHD 120Hz Display',35900,'lap9.png')">
+            Add to Cart
+        </button>
+
+        <button class="buy" onclick="buyNow('Dell 15 Laptop DC15250-15.6-inch FHD 120Hz Display',35900,'lap9.png')">
+            Buy Now
+        </button>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+    </div>	
+    <div class="Right-shop">
+ 
+    </div>
+
+</div>
+
+
+
+<!-- Back to top -->
+<div class="top-bar">
+    Back to top
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <div class="footer-container">
+
+        <div class="footer-column">
+            <h3>Get to Know Us</h3>
+            <p>About Mini Bajar</p>
+            <p>Careers</p>
+            <p>Press Releases</p>
+            <p>Mini Bajar Science</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Connect with Us</h3>
+            <p><i class="fa-brands fa-square-facebook" style="color: #ffffff;"></i>Facebook</p>
+            <p>Twitter</p>
+            <p>Instagram</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Make Money with Us</h3>
+            <p>Sell on Mini Bajar</p>
+            <p>Sell under Mini Bajar Accelerator</p>
+            <p>Protect and Build Your Brand</p>
+            <p>Mini Bajar Global Selling</p>
+            <p>Supply to Mini Bajar</p>
+            <p>Become an Affiliate</p>
+            <p>Fulfilment by Mini Bajar</p>
+            <p>Advertise Your Products</p>
+            <p>Mini Bajar Pay on Merchants</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Let Us Help You</h3>
+            <p>Your Account</p>
+            <p>Returns Centre</p>
+            <p>Recalls and Product Safety Alerts</p>
+            <p>100% Purchase Protection</p>
+            <p>Mini Bajar App Download</p>
+            <p>Help</p>
+        </div>
+
+    </div>
+</div>
+
+<script>
+document.querySelector(".top-bar").onclick = function() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+};
+</script>
+
+
+</body>
+</html>

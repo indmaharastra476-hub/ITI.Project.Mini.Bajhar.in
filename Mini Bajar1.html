@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html>
+ <head>
+	<title> Mini Bazar 1 </title>
+<link rel="stylesheet" href="Mini1.css" >
+<script>
+function addToCart(name, price, image) {
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    cart.push({name, price, image});
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    alert("Added to Cart!");
+    window.location.href = "cart.html"; 
+}
+function buyNow(name, price, image){
+
+    let buyProduct = [{
+        name: name,
+        price: price,
+        image: image
+    }];
+
+    localStorage.setItem("cart", JSON.stringify(buyProduct));
+
+    window.location.href = "Address.html";
+}
+
+
+
+
+function searchProduct(){
+
+    let search =
+    document.getElementById("searchInput")
+    .value.toLowerCase();
+
+    
+    if(search.includes("keyboard")){
+        window.location.href = "Keyboard.html";
+    }
+
+
+    else if(search.includes("cooker")){
+        window.location.href = "Cooker.html";
+    }
+
+    else if(search.includes("mouse")){
+        window.location.href = "mouse tab.html";
+    }
+
+    else if(search.includes("bottle")){
+        window.location.href = "Bottle.html";
+    }
+
+    else if(search.includes("trimmer")){
+        window.location.href = "Trimmer.html";
+    }
+
+    else if(search.includes("kurti")){
+        window.location.href = "kurti.html";
+    }
+    else if(search.includes("ret ki machhali")){
+        window.location.href = "Books.html";
+    }
+    else if(search.includes("gunahoka devta")){
+        window.location.href = "Books.html";
+    }
+    else if(search.includes("book")){
+        window.location.href = "Books.html";
+    }
+    else if(search.includes("books")){
+        window.location.href = "Books.html";
+    }
+
+else if(search.includes("boys shoes")){
+    window.location.href = "Shoes.html";
+}
+else if(search.includes("sport shoes")){
+    window.location.href = "Shoes.html";
+}
+else if(search.includes("shoes")){
+    window.location.href = "Shoes.html";
+}
+else if(search.includes("shoe")){
+    window.location.href = "Shoes.html";
+}
+
+else if(search.includes("all laptops")){
+    window.location.href = "Laptop.html";
+}
+else if(search.includes("laptop")){
+    window.location.href = "Laptop.html";
+}
+else if(search.includes("laptops")){
+    window.location.href = "Laptop.html";
+}
+else if(search.includes("apple")){
+    window.location.href = "Apply.html";
+}
+
+
+    else{
+        alert("Product Not Found");
+    }
+}
+
+
+
+// ENTER BUTTON SEARCH
+let input = document.getElementById("searchInput");
+
+input.addEventListener("keyup", function(event){
+
+    if(event.key === "Enter"){
+        searchProduct();
+    }
+
+});
+
+</script>
+
+ </head>
+ <body>
+<header> 
+ <div class="box1-logo">
+   <div class="box-logo">
+     <div class="logo">Mini<span>Bajar</span></div>
+   </div>
+
+   <div class="address">
+   <div id="first-1"><p class="first"> Deliver to </p> <div class="second"><img src="location icon.png" class="loca-icon"> India  </div>    </div> 
+   </div>
+ <p style="color:black"> as</p>
+  <div class="Search">
+  <input placeholder="Search MiniBajar.in" 
+class="search-bar" id="searchInput">
+<div class="Search icon" onclick="searchProduct()">
+    <img src="search icon.png" class="search-icon">  
+</div>
+  </div>
+  <div class="login">
+	<div class="log" > <a href="Profile.html"> <img  src="circle-user-solid.png"> </a></div> 
+
+  </div>
+<div class="login1">
+  <div class="retan"><p id="ret"> Returns</p> <p id="ord"> & Orders </p>
+  </div></div>
+  <div class="cart">
+  <div class="adcart"> 🛒<a href="cart.html" style="color:white; text-decoration: none;">Cart  </a>
+  </div></div>
+
+ </div>
+
+</header>
+<div id="searchResults"></div>
+<div class="navbar">
+    <div class="nav-menu">
+           <a href="Mini Bajar1.html">Home</a>
+
+        <a href="Electronics.html">Electronics</a>
+        
+        <a href="Books.html">Books</a>
+        <a href="About.html">About</a>
+        <a href="Contact.html">Contact</a>
+
+    </div>
+
+</div>
+
+
+
+
+<img id="id" src="Mini bajar logo.png">
+
+
+
+
+
+
+
+
+
+<div class="container">
+
+    <div class="card">
+    <a href="mouse tab.html"><img src="mouse.jpg" alt=""></a>
+    <h3>HyperX Pulsefire Saga Wired RGB Gaming Mouse</h3>
+    <p>₹199 </p>
+    <button onclick="addToCart('HyperX Pulsefire Saga',199,'mouse.jpg')">Add to Cart</button>
+                <button class="buy" onclick="buyNow('HyperX Pulsefire Saga',199,'mouse.jpg')">Buy Now</button>
+</div>
+
+<div class="card">
+    <a href="Keyboard.html"><img src="Keyboard.jpg"></a>
+    <h3>Portronics Hydra 10 Wireless Mechanical Gaming Keyboard</h3>
+    <p>₹299</p>
+    <button onclick="addToCart('Portronics Hydra 10 Wireless',299,'Keyboard.jpg')">Add to Cart</button>
+                <button class="buy" onclick="buyNow('Portronics Hydra 10 Wireless',299,'Keyboard.jpg')">Buy Now</button>
+</div>
+
+<div class="card">
+    <a href="Cooker.html"><img src="cook.jpg"></a>
+    <h3>Cellecor Multi-Cook Electric Kettle</h3>
+    <p>₹199</p>
+    <button onclick="addToCart('Cellecor Multi-Cook Kettle',199,'cook.jpg')">Add to Cart</button>
+                <button class="buy" onclick="buyNow('Cellecor Multi-Cook Kettle',199,'cook.jpg')">Buy Now</button>
+</div>
+
+<div class="card">
+    <a href="Bottle.html"><img src="bottle.jpg"></a>
+    <h3>Aquaminder Smart Water Bottle Glows </h3>
+    <p>₹149</p>
+    <button onclick="addToCart('Aquaminder Smart Water Bottle Glows',149,'bottle.jpg')">Add to Cart</button>
+                <button class="buy" onclick="buyNow('Aquaminder Smart Water Bottle Glows',149,'bottle.jpg')">Buy Now</button>
+</div>
+
+<div class="card">
+    <a href="Trimmer.html"><img src="trimmer.jpg"></a>
+    <h3>Philips OneBlade Turbo2X Hybrid Trim, Edge, Shave </h3>
+    <p>₹330</p>
+    <button onclick="addToCart('Philips OneBlade Turbo2X Hybrid Trimmer',330,'trimmer.jpg')">Add to Cart</button>
+                <button class="buy" onclick="buyNow('Philips OneBlade Turbo2X Hybrid Trimmer',330,'trimmer.jpg')">Buy Now</button>
+</div>
+
+
+
+</div>
+
+
+
+<div class="brand-section">
+    <div class="brand-row">
+
+        <!-- ORIGINAL -->
+        <div class="brand-card"><img src="1.jpg"></div>
+        <div class="brand-card"><img src="2.jpg"></div>
+        <div class="brand-card"><img src="3.jpg"></div>
+        <div class="brand-card"><img src="4.jpg"></div>
+        <div class="brand-card"><img src="5.jpg"></div>
+        <div class="brand-card"><img src="6.jpg"></div>
+        <div class="brand-card"><img src="7.jpg"></div>
+        <div class="brand-card"><img src="8.jpg"></div>
+
+        <!-- DUPLICATE (smooth infinite scroll sathi) -->
+        <div class="brand-card"><img src="1.jpg"></div>
+        <div class="brand-card"><img src="2.jpg"></div>
+        <div class="brand-card"><img src="3.jpg"></div>
+        <div class="brand-card"><img src="4.jpg"></div>
+        <div class="brand-card"><img src="5.jpg"></div>
+        <div class="brand-card"><img src="6.jpg"></div>
+        <div class="brand-card"><img src="7.jpg"></div>
+        <div class="brand-card"><img src="8.jpg"></div>
+
+    </div>
+</div>
+
+
+
+
+<div class="container1">
+
+    <!-- Left Section -->
+    <div class="left1">
+        <p class="OY">Up to</p>
+        <h1 class="h7">98% OFF</h1>
+        <p class="oy">on first order</p>
+        <p class="oy">*Only on App</p>
+
+        <button id="MEN">Download Now</button>
+    </div>
+
+    <!-- Right Section -->
+    <div class="right1">
+
+        <div class="card1">
+           <img src="one.webp" class="im1">
+            <br>
+            <button class="tton1">Trending Now</button>
+        </div>
+
+        <div class="card1">
+             <img src="one1.webp" class="im1">
+            <br>
+            <button class="tton1">Budget Buys</button>
+        </div>
+
+        <div class="card1">
+            <img src="one2.webp" class="im1">
+            <br>
+            <button class="tton1">Top Rated Picks</button>
+        </div>
+
+        <div class="card1">
+            <img src="one3.webp" class="im1">
+            <br>
+            <button class="tton1">Daily Essentials</button>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<br>
+
+
+<h2 align=center > Products For You </h2>
+<div class="Shop-Now">
+    <div class="Left-shop">
+
+
+    </div>
+    <div class="Center-shop">
+<div class="product-grid">
+    <!-- Product 1 -->
+    <div class="product-card">
+        <div class="image-container">
+           <a href="kurti.html"> <img src="kurti.jpg" alt="Kurti"></a>
+        </div>
+        <div class="content">
+            <p class="title">Traditional Cotton Ajrakh Printed Kurti For Wome</p>
+            <div class="price-section">
+                <span class="current-price">₹130</span>
+                <span class="old-price">₹1999</span>
+                <span class="discount-percent">89% off</span>
+            </div>
+            <div class="rating-badge">4.1 ★</div>
+            <span class="reviews-count">286392 Reviews</span>
+            <br>
+            <p class="free-delivery">Free Delivery</p>
+	
+	<button onclick="addToCart('Traditional Cotton Ajrakh Printed Kurti For Wome',130,'kurti.jpg')">Add to Cart</button>
+                <button class="buy" onclick="buyNow('Traditional Cotton Ajrakh Printed Kurti For Wome',130,'kurti.jpg')">Buy Now</button>
+        </div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-card">
+        <div class="image-container">
+            <img src="Shoes.jpg" alt="Shoes">
+        </div>
+        <div class="content">
+            <p class="title">ASIAN Men POWERPLAY-01 Running and Casual wear Walking Shoes with Laces</p>
+            <div class="price-section">
+                <span class="current-price">₹295</span>
+                <span class="old-price">₹2499</span>
+                <span class="discount-percent">90% off</span>
+            </div>
+            <div class="rating-badge">4.0 ★</div>
+            <span class="reviews-count">9016 Reviews</span>
+            <br>
+            <p class="free-delivery">Free Delivery</p>
+	
+	<button onclick="addToCart('ASIAN Men POWERPLAY-01 Running and Casual wear Walking Shoes',295,'Shoes.jpg')">Add to Cart</button>
+                <button class="buy" onclick="buyNow('ASIAN Men POWERPLAY-01 Running and Casual wear Walking Shoes',295,'Shoes.jpg')">Buy Now</button>
+        </div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product-card">
+        <div class="image-container">
+            <img src="Bluetooth.jpg" alt="Bluetooth">
+        </div>
+        <div class="content">
+            <p class="title">Truke Mega 9 New Launch True Wireless in Ear Earbuds W/ 24-Bit Lossless Spatial Audio, 70H Battery Fast Charge Ear Buds, Leather Finish, 13mm Speakers TWS, 40ms Ultra Low Latency, 4Mics ENC</p>
+            <div class="price-section">
+                <span class="current-price">₹440</span>
+                <span class="old-price">₹2999</span>
+                <span class="discount-percent">92% off</span>
+            </div>
+            <div class="rating-badge">4.7 ★</div>
+            <span class="reviews-count">8415 Reviews</span>
+            <br>
+            <p class="free-delivery">Free Delivery</p>
+	
+	<button onclick="addToCart('Truke Mega 9 New Launch True Wireless in Ear Earbuds',440,'Bluetooth.jpg')">Add to Cart</button>
+                <button class="buy" onclick="buyNow('Truke Mega 9 New Launch True Wireless in Ear Earbuds',440,'Bluetooth.jpg')">Buy Now</button>
+        </div>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="product-card">
+        <div class="image-container">
+            <img src="Kurta Pant.jpg" alt="Kurta Pant">
+        </div>
+        <div class="content">
+            <p class="title">TRENDMALLS Women’s Chanderi Cotton Embroidery Sequence Work Kurta Pant with Dupatta Set | Summer Ethnic Wear Kurta Set For Women</p>
+            <div class="price-section">
+                <span class="current-price">₹430</span>
+                <span class="old-price">₹2399</span>
+                <span class="discount-percent">95% off</span>
+            </div>
+            <div class="rating-badge">4.4 ★</div>
+            <span class="reviews-count">286392 Reviews</span>
+            <br>
+            <p class="free-delivery">Free Delivery</p>
+	
+	<button onclick="addToCart('TRENDMALLS Womens Chanderi Cotton Embroidery Sequence Work Kurta Pant',430,'Kurta Pant.jpg')">Add to Cart</button>
+                <button class="buy" onclick="buyNow('TRENDMALLS Womens Chanderi Cotton Embroidery Sequence Work Kurta Pant',430,'Kurta Pant.jpg')">Buy Now</button>
+        </div>
+    </div>
+
+    <!-- Product 5 -->
+    <div class="product-card">
+        <div class="image-container">
+            <img src="Shirt.jpg" alt="Shirt">
+        </div>
+        <div class="content">
+            <p class="title">DEELMO Men's Casual Button Down Shirts Long Sleeve Linen Shirt Fashion Textured Beach Summer Shirt</p>
+            <div class="price-section">
+                <span class="current-price">₹280</span>
+                <span class="old-price">₹1999</span>
+                <span class="discount-percent">90% off</span>
+            </div>
+            <div class="rating-badge">4.3 ★</div>
+            <span class="reviews-count">10416 Reviews</span>
+            <br>
+            <p class="free-delivery">Free Delivery</p>
+	
+	<button onclick="addToCart('DEELMO Mens Casual Button Down Shirts',280,'Shirt.jpg')">Add to Cart</button>
+                <button class="buy" onclick="buyNow('DEELMO Mens Casual Button Down Shirts',280,'Shirt.jpg')">Buy Now</button>
+        </div>
+    </div>
+
+    <!-- Product 6 -->
+    <div class="product-card">
+        <div class="image-container">
+             <a href="Trimmer.html"><img src="trimmer.jpg"></a>
+        </div>
+        <div class="content">
+            <p class="title">Philips OneBlade Hybrid Trimmer</p>
+            <div class="price-section">
+                <span class="current-price">₹330</span>
+                <span class="old-price">₹1900</span>
+                <span class="discount-percent">34% off</span>
+            </div>
+            <div class="rating-badge">4.2 ★</div>
+            <span class="reviews-count">5415 Reviews</span>
+            <br>
+            <p class="free-delivery">Free Delivery</p>
+	
+	<button onclick="addToCart('Traditional Cotton Ajrakh Printed Kurti For Wome',130,'kurti.jpg')">Add to Cart</button>
+                <button class="buy" onclick="buyNow('Traditional Cotton Ajrakh Printed Kurti For Wome',130,'kurti.jpg')">Buy Now</button>
+        </div>
+    </div>
+
+    <!-- Product 7 -->
+    <div class="product-card">
+        <div class="image-container">
+            <img src="Nike shoes.jpg" alt="Trimmer">
+        </div>
+        <div class="content">
+            <p class="title">Nike Mens Air Zoom Pegasus 41 Running Shoes</p>
+            <div class="price-section">
+                <span class="current-price">₹599</span>
+                <span class="old-price">₹11000</span>
+                <span class="discount-percent">94% off</span>
+            </div>
+            <div class="rating-badge">4.9 ★</div>
+            <span class="reviews-count">15415 Reviews</span>
+            <br>
+            <p class="free-delivery">Free Delivery</p>
+	
+	<button onclick="addToCart('Nike Mens Air Zoom Pegasus 41 Running Shoes',599,'Nike shoes.jpg')">Add to Cart</button>
+                <button class="buy" onclick="buyNow('Nike Mens Air Zoom Pegasus 41 Running Shoes',599,'Nike shoes.jpg')">Buy Now</button>
+        </div>
+    </div>
+    <!-- Product 8 -->
+    <div class="product-card">
+        <div class="image-container">
+            <img src="watch1.jpg" alt="Trimmer">
+        </div>
+        <div class="content">
+            <p class="title">Noise Twist Go Smart Watch 1.39" Display, TruSyncᵀᴹ BT Calling, Glossy Metal Finish, 150+ Watch Faces, IP68, Sleep Tracking, 100+ Sports Modes, Smart Watch for Men and Women (Forest Green)</p>
+            <div class="price-section">
+                <span class="current-price">₹489</span>
+                <span class="old-price">₹4999</span>
+                <span class="discount-percent">94% off</span>
+            </div>
+            <div class="rating-badge">4.0 ★</div>
+            <span class="reviews-count">1515 Reviews</span>
+            <br>
+            <p class="free-delivery">Free Delivery</p>
+	
+	<button onclick="addToCart('Noise Twist Go Smart Watch 1.39 Display',489,'watch1.jpg')">Add to Cart</button>
+                <button class="buy" onclick="buyNow('Noise Twist Go Smart Watch 1.39 Display',489,'watch1.jpg')">Buy Now</button>
+        </div>
+    </div>
+    <!-- Product 9 -->
+    <div class="product-card">
+        <div class="image-container">
+            <img src="spicker1.jpg" alt="Trimmer">
+        </div>
+        <div class="content">
+            <p class="title">JBL Go 3, Wireless Ultra Portable Bluetooth Speaker, Pro Sound, Vibrant Colors with Rugged Fabric Design, Waterproof, Type C (Without Mic, Blue)</p>
+            <div class="price-section">
+                <span class="current-price">₹400</span>
+                <span class="old-price">₹3499</span>
+                <span class="discount-percent">96% off</span>
+            </div>
+            <div class="rating-badge">4.2 ★</div>
+            <span class="reviews-count">14015 Reviews</span>
+            <br>
+            <p class="free-delivery">Free Delivery</p>
+	
+	<button onclick="addToCart('JBL Go 3  Wireless Ultra Portable Bluetooth Speaker',400,'spicker1.jpg')">Add to Cart</button>
+                <button class="buy" onclick="buyNow('JBL Go 3  Wireless Ultra Portable Bluetooth Speaker',400,'spicker1.jpg')">Buy Now</button>
+        </div>
+    </div>
+    <!-- Product 10 -->
+    <div class="product-card">
+        <div class="image-container">
+            <img src="chanda book.jpg" alt="Trimmer">
+        </div>
+        <div class="content">
+            <p class="title">Chandpur Ki Chanda । चाँदपुर की चंदा</p>
+            <div class="price-section">
+                <span class="current-price">₹40</span>
+                <span class="old-price">₹199</span>
+                <span class="discount-percent">82% off</span>
+            </div>
+            <div class="rating-badge">4.2 ★</div>
+            <span class="reviews-count">315 Reviews</span>
+            <br>
+            <p class="free-delivery">Free Delivery</p>
+	
+	<button onclick="addToCart('Chandpur Ki Chanda । चाँदपुर की चंदा',40,'chanda book.jpg')">Add to Cart</button>
+                <button class="buy" onclick="buyNow('Chandpur Ki Chanda । चाँदपुर की चंदा',40,'chanda book.jpg')">Buy Now</button>
+        </div>
+    </div>
+    <!-- Product 11 -->
+    <div class="product-card">
+        <div class="image-container">
+            <img src="akarshan book.jpg" alt="Trimmer">
+        </div>
+        <div class="content">
+            <p class="title">The Law of Attraction : Aakarshan ka Niyam | Manifest Anything or Ask and It is Given | Hidden Power of your Subconscious Mind — Self Help Book in Hindi </p>
+            <div class="price-section">
+                <span class="current-price">₹45</span>
+                <span class="old-price">₹399</span>
+                <span class="discount-percent">86% off</span>
+            </div>
+            <div class="rating-badge">4.4 ★</div>
+            <span class="reviews-count">1415 Reviews</span>
+            <br>
+            <p class="free-delivery">Free Delivery</p>
+	
+	<button onclick="addToCart('The Law of Attraction : Aakarshan ka Niyam | Manifest Anything or Ask and It is Given | Hidden Power of your Subconscious Mind — Self Help Book in Hindi ',45,'akarshan book.jpg')">Add to Cart</button>
+                <button class="buy" onclick="buyNow('The Law of Attraction : Aakarshan ka Niyam | Manifest Anything or Ask and It is Given | Hidden Power of your Subconscious Mind — Self Help Book in Hindi ',45,'akarshan book.jpg')">Buy Now</button>
+        </div>
+    </div>
+    <!-- Product 12 -->
+    <div class="product-card">
+        <div class="image-container">
+           <a href="Apple.html"> <img src="lap4.png" alt="Trimmer"></a>
+        </div>
+        <div class="content">
+            <p class="title">Apple 2026 MacBook Pro Laptop with M5 Pro chip with 15‑core CPU and 16‑core GPU: Built for AI, 35.97 cm (14.2″) Liquid Retina XDR Display, 24GB Unified Memory, 1TB SSD Storage; Space Black</p>
+            <div class="price-section">
+                <span class="current-price">₹99,999</span>
+                <span class="old-price">₹2,99,999</span>
+                <span class="discount-percent">75% off</span>
+            </div>
+            <div class="rating-badge">4.3 ★</div>
+            <span class="reviews-count">3015 Reviews</span>
+            <br>
+            <p class="free-delivery">Free Delivery</p>
+	
+	<button onclick="addToCart('Apple 2026 MacBook Pro Laptop with M5 Pro chip with 15‑core CPU and 16‑core GPU',99999,'lap4.png')">Add to Cart</button>
+                <button class="buy" onclick="buyNow('Apple 2026 MacBook Pro Laptop with M5 Pro chip with 15‑core CPU and 16‑core GPU',99999,'lap4.png')">Buy Now</button>
+        </div>
+
+
+
+
+
+</div>
+
+
+    </div>	
+    <div class="Right-shop">
+ 
+    </div>
+
+</div>
+
+</div>
+<br>
+
+<!-- Back to top -->
+<div class="top-bar">
+    Back to top
+</div>
+
+
+<!-- Footer -->
+<div class="footer">
+    <div class="footer-container">
+
+        <div class="footer-column">
+            <h3>Get to Know Us</h3>
+            <p>About Mini Bajar</p>
+            <p>Careers</p>
+            <p>Press Releases</p>
+            <p>Mini Bajar Science</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Connect with Us</h3>
+            <p><i class="fa-brands fa-square-facebook" style="color: #ffffff;"></i>Facebook</p>
+            <p>Twitter</p>
+            <p>Instagram</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Make Money with Us</h3>
+            <p>Sell on Mini Bajar</p>
+            <p>Sell under Mini Bajar Accelerator</p>
+            <p>Protect and Build Your Brand</p>
+            <p>Mini Bajar Global Selling</p>
+            <p>Supply to Mini Bajar</p>
+            <p>Become an Affiliate</p>
+            <p>Fulfilment by Mini Bajar</p>
+            <p>Advertise Your Products</p>
+            <p>Mini Bajar Pay on Merchants</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Let Us Help You</h3>
+            <p>Your Account</p>
+            <p>Returns Centre</p>
+            <p>Recalls and Product Safety Alerts</p>
+            <p>100% Purchase Protection</p>
+            <p>Mini Bajar App Download</p>
+            <p>Help</p>
+        </div>
+
+    </div>
+</div>
+
+<script>
+document.querySelector(".top-bar").onclick = function() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+};
+</script>
+
+
+<script>
+const searchInput = document.getElementById("searchInput");
+const resultsBox = document.getElementById("searchResults");
+
+searchInput.addEventListener("input", function() {
+
+    let value = this.value.toLowerCase();
+    resultsBox.innerHTML = "";
+
+    if(value === "") return;
+
+    let products = document.querySelectorAll(".card, .product-card");
+
+    products.forEach(product => {
+
+        let titleEl = product.querySelector("h3") || product.querySelector(".title");
+        let imgEl = product.querySelector("img");
+        let linkEl = product.querySelector("a");
+
+        if(titleEl && imgEl && linkEl){
+
+            let title = titleEl.textContent;
+
+            if(title.toLowerCase().includes(value)){
+
+                resultsBox.innerHTML += `
+                    <div class="result-item"
+                         onclick="window.location.href='${linkEl.href}'">
+                        <img src="${imgEl.src}">
+                        <span>${title}</span>
+                    </div>
+                `;
+            }
+        }
+    });
+
+});
+</script>
+
+
+
+
+
+ </body>
+</html>
