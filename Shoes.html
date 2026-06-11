@@ -1,0 +1,730 @@
+<! DOCTYPE html>
+<html>
+ <head>
+  <title>Shoes </title>
+<style>
+* { box-sizing:border-box; 
+    margin:0%; 
+    font-family:Arial;
+}
+body {background-color:#e3e3e3ff;}
+ .box1-logo { 
+	background-color:#0f1111;
+	height:72px;
+	color:white;
+	padding:1px;
+	display:flex;
+	align-items:center;
+	
+ }
+
+        header {
+            top:0; 
+            position:sticky;
+            z-index: 1000;
+        }
+
+        .box-logo {
+            height:70px;
+            width:165px;
+            border:0px solid;
+            margin:1px 30px 1px 30px;
+        }
+        .box-logo:hover {
+            border:1px solid white;
+        }
+        .logo{
+            font-size:30px;
+            font-weight:bold;
+            width:80px; 
+            padding:13px;
+        }
+        .logo span{
+            color:orange;
+        }
+        
+        /* box 2 */
+        .loca-icon { height:20px; }
+
+        #first-1 { 
+            border:1px solid transparent;
+            padding:13px;
+        }
+        #first-1:hover { border:1px solid white; }
+        
+        .first {
+            color:#cccccc;
+            font-size:15px;
+            width:80px; 
+        }
+        
+        .second { color:white; }
+        
+        /* box 3 */
+        .Search { 
+            border:1px solid transparent;
+            display:flex;
+            flex:1;
+            align-items:center;
+            background-color:#ffbd66ff;
+            border-radius:4px;
+            height: 40px;
+        }
+        .Search:hover { border:2px solid #f6971fff; }
+        .search-bar { 
+            flex:29;
+            border:none;
+            border-radius:4px 0px 0px 4px;
+            height: 100%;
+            padding: 10px;
+            outline: none;
+        }
+
+        .search-icon { height:40px; cursor: pointer; }
+        
+        .login { display:flex; font-size:17px; padding:2px; }
+        .log { border:1px solid transparent; padding:10px; cursor: pointer; }
+        .log:hover { border:1px solid white; }
+        .log img { height:41px; margin:0px 10px 0px 10px; }
+
+        .login1 { display:flex; padding:2px; }
+        .retan { border:1px solid transparent; padding:17px; cursor: pointer; }
+        .retan:hover { border:1px solid white; }
+
+        #ret { font-size:13px; }
+        #ord { font-weight:bold; }
+        
+        .cart { display:flex; padding:2px; }
+        .adcart { border:1px solid transparent; padding:23px; font-weight:bold; cursor: pointer; }
+        .adcart:hover { border:1px solid white; }
+        .adcart a { color: white; text-decoration: none; }
+
+        /* Navbar */
+        .navbar {
+            top:71px; 
+            position:sticky;
+            background: #222e3dff;
+            padding: 7px 0;
+            z-index: 999;
+        }
+
+        .nav-menu {
+            display: flex;
+            justify-content: center; 
+            gap: 40px;
+        }
+
+        .nav-menu a {
+            font-weight:700;
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            transition: 0.3s;
+        }
+        .nav-menu a:hover { color: #ff9800; }
+
+
+
+
+
+
+.Shop-Now {  display: flex;
+	
+	
+	
+ }
+.Left-shop {
+	width:15%;
+ }
+
+.Center-shop { width:70%;
+
+
+
+
+
+
+ }
+
+
+     /* Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+            max-width: 2000px;
+            margin: 0 auto;
+        }
+
+        /* Product Card */
+        .product-card { 
+            background: white;
+           border-radius:4px;
+            overflow: hidden;
+            border: 1px solid #f0f0f0;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .image-container {
+            width: 100%;
+            height: 350px;
+            background: #fdfdfd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            max-height: 350px;
+            object-fit: contain;
+        }
+
+        .content {
+            padding: 12px;
+        }
+
+        .title {
+            font-size: 18px;
+            color: #8b8b8b;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-bottom: 2px;
+        }
+
+        .price-section {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 3px;
+        }
+
+        .current-price {
+            font-size: 20px;
+            font-weight: 700;
+            color: #2d3436;
+        }
+
+        .old-price {
+            font-size: 14px;
+            color: #999;
+            text-decoration: line-through;
+        }
+
+        .discount-percent {
+            font-size: 14px;
+            color: #03a685;
+            font-weight: 600;
+        }
+
+        /* Green Rating Badge */
+        .rating-badge {
+            display: inline-flex;
+            align-items: center;
+            background-color: #03a685;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 1px;
+        }
+
+        .reviews-count {
+            font-size: 13px;
+            color: #999;
+            margin-left: 5px;
+        }
+
+        .free-delivery {
+            font-size: 15px;
+            color: #555;
+            background: #f1f1f1;
+            padding: 2px 8px;
+            border-radius: 4px;
+            display: inline-block;
+	margin-bottom: 5px;
+        }
+
+button {
+	margin-bottom: 5px;
+    background: #f7ca00;
+    color: black;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.buy {background-color:orange;
+	margin-bottom: 2px;
+color: white;
+ }
+
+
+
+.Right-shop {
+	width:15%;
+ }
+h1 { text-align:center;
+	font-size:50px;
+padding-bottom:40px;
+}
+
+
+
+
+
+
+
+
+
+
+/* Back to top bar */
+.top-bar {
+    background-color: #37475a;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    cursor: pointer;
+}
+
+/* Footer main */
+.footer {
+    background-color: #232f3e;
+    color: white;
+    padding: 40px 80px;
+}
+
+/* Columns */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    width: 22%;
+}
+
+.footer-column h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.footer-column p {
+    margin: 8px 0;
+    font-size: 14px;
+    color: #ddd;
+    cursor: pointer;
+}
+
+.footer-column p:hover {
+    text-decoration: underline;
+}
+.input {margin-left:15px;
+	margin-top:5px;
+	background-color:black;
+	top:110px;
+	position:sticky;
+	width:80px;
+}
+
+</style>
+<script>
+function addToCart(name, price, image) {
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    cart.push({name, price, image});
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    alert("Added to Cart!");
+    window.location.href = "cart.html"; 
+}
+
+function buyNow(name, price, image){
+
+    let buyProduct = [{
+        name: name,
+        price: price,
+        image: image
+    }];
+
+    localStorage.setItem("cart", JSON.stringify(buyProduct));
+
+    window.location.href = "Address.html";
+}
+</script>
+ </head>
+ <body>
+
+<header> 
+ <div class="box1-logo">
+   <div class="box-logo">
+     <div class="logo">Mini<span>Bajar</span></div>
+   </div>
+
+   <div class="address">
+       <div id="first-1">
+           <p class="first"> Deliver to </p> 
+           <div class="second"><img src="location icon.png" class="loca-icon"> India </div>    
+       </div> 
+   </div>
+   <p style="color:black"> as</p>
+   
+   <div class="Search">
+       <input placeholder="Search MiniBajar.in" class="search-bar">
+       <div class="Search icon"><img src="search icon.png" class="search-icon"></div>
+   </div>
+   
+   <div class="login">
+       <div class="log"><a href="Profile.html"><img src="circle-user-solid.png"></a></div> 
+   </div>
+   
+   <div class="login1">
+       <div class="retan"><p id="ret"> Returns</p> <p id="ord"> & Orders </p></div>
+   </div>
+   
+   <div class="cart">
+       <div class="adcart">🛒<a href="cart.html" style="color:white; text-decoration: none;">Cart</a></div>
+   </div>
+ </div>
+</header>
+
+<div class="navbar">
+    <div class="nav-menu">
+           <a href="Mini Bajar1.html">Home</a>
+
+        <a href="Electronics.html">Electronics</a>
+        
+        <a href="Books.html">Books</a>
+        <a href="About.html">About</a>
+        <a href="Contact.html">Contact</a>
+    </div>
+</div>
+<button class="input"><a href="Mini Bajar1.html" style="color:white; text-decoration: none;"> Back </a></button>
+
+
+
+
+
+
+
+
+
+
+
+
+<h1> The SHOES Mart</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="Shop-Now">
+    <div class="Left-shop">
+
+
+    </div>
+<div class="Center-shop">
+<div class="product-grid">
+    <!-- Product 1 -->
+    <div class="product-card">
+        <div class="image-container">
+           <img src="Shoes11.jpg" alt="Shoes">
+        </div>
+        <div class="content">
+            <p class="title">BRUTON EVA Lite Sport Shoes Running Shoes for Men- White	</p>
+            <div class="price-section">
+                <span class="current-price">₹200</span>
+                <span class="old-price">₹999</span>
+                <span class="discount-percent">89% off</span>
+            </div>
+            <div class="rating-badge">4.0 ★</div>
+            <span class="reviews-count">6392 Reviews</span>
+            <br>
+            <p class="free-delivery">Free Delivery</p>
+	
+	<button onclick="addToCart('BRUTON EVA Lite Sport Shoes Running Shoes for Men White',200,'Shoes11.jpg')">Add to Cart</button>
+       <button class="buy" onclick="buyNow('BRUTON EVA Lite Sport Shoes Running Shoes for Men White',200,'Shoes11.jpg')">Buy Now</button>
+
+        </div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-card">
+        <div class="image-container">
+           <img src="Shoes12.jpg" alt="Shoes">
+        </div>
+        <div class="content">
+            <p class="title">Bacca Bucci Men Lace Up Running Shoes</p>
+            <div class="price-section">
+                <span class="current-price">₹599</span>
+                <span class="old-price">₹2999</span>
+                <span class="discount-percent">80% off</span>
+            </div>
+            <div class="rating-badge">4.3 ★</div>
+            <span class="reviews-count">2892 Reviews</span>
+            <br>
+            <p class="free-delivery">Free Delivery</p>
+	
+	<button onclick="addToCart('Bacca Bucci Men Lace Up Running Shoes',599,'Shoes12.jpg')">Add to Cart</button>
+       <button class="buy" onclick="buyNow('Bacca Bucci Men Lace Up Running Shoes',599,'Shoes12.jpg')">Buy Now</button>
+
+        </div>
+    </div>
+
+
+
+ <!-- Product 3 -->
+    <div class="product-card">
+        <div class="image-container">
+           <img src="Shoes13.jpg" alt="Shoes">
+        </div>
+        <div class="content">
+            <p class="title">CULT Men's Zephyr Running Shoes</p>
+            <div class="price-section">
+                <span class="current-price">₹559</span>
+                <span class="old-price">₹3999</span>
+                <span class="discount-percent">92% off</span>
+            </div>
+            <div class="rating-badge">4.5 ★</div>
+            <span class="reviews-count">8632 Reviews</span>
+            <br>
+            <p class="free-delivery">Free Delivery</p>
+	
+	<button onclick="addToCart('CULT Mens Zephyr Running Shoes',559,'Shoes13.jpg')">Add to Cart</button>
+       <button class="buy" onclick="buyNow('CULT Mens Zephyr Running Shoes',559,'Shoes13.jpg')">Buy Now</button>
+
+        </div>
+    </div>
+ <!-- Product 4 -->
+    <div class="product-card">
+        <div class="image-container">
+           <img src="Shoes14.jpg" alt="Shoes">
+        </div>
+        <div class="content">
+            <p class="title">Lancer Mens Indus-251 Running Shoe</p>
+            <div class="price-section">
+                <span class="current-price">₹290</span>
+                <span class="old-price">₹1299</span>
+                <span class="discount-percent">90% off</span>
+            </div>
+            <div class="rating-badge">4.0 ★</div>
+            <span class="reviews-count">6311 Reviews</span>
+            <br>
+            <p class="free-delivery">Free Delivery</p>
+	
+	<button onclick="addToCart('Lancer Mens Indus 251 Running Shoe',290,'Shoes14.jpg')">Add to Cart</button>
+       <button class="buy" onclick="buyNow('Lancer Mens Indus 251 Running Shoe',290,'Shoes14.jpg')">Buy Now</button>
+
+        </div>
+    </div>
+ <!-- Product 5 -->
+    <div class="product-card">
+        <div class="image-container">
+           <img src="Shoes15.jpg" alt="Shoes">
+        </div>
+        <div class="content">
+            <p class="title">CULT Men's GlideMax Trail Running Shoes</p>
+            <div class="price-section">
+                <span class="current-price">₹699</span>
+                <span class="old-price">₹4999</span>
+                <span class="discount-percent">95% off</span>
+            </div>
+            <div class="rating-badge">4.6 ★</div>
+            <span class="reviews-count">28392 Reviews</span>
+            <br>
+            <p class="free-delivery">Free Delivery</p>
+	
+	<button onclick="addToCart('CULT Mens GlideMax Trail Running Shoes',699,'Shoes15.jpg')">Add to Cart</button>
+       <button class="buy" onclick="buyNow('CULT Mens GlideMax Trail Running Shoes',699,'Shoes15.jpg')">Buy Now</button>
+
+        </div>
+    </div>
+ <!-- Product 6 -->
+    <div class="product-card">
+        <div class="image-container">
+           <img src="Shoes16.jpg" alt="Shoes">
+        </div>
+        <div class="content">
+            <p class="title">Nike Mens Quest 6 Running Shoes</p>
+            <div class="price-section">
+                <span class="current-price">₹790</span>
+                <span class="old-price">₹6999</span>
+                <span class="discount-percent">92% off</span>
+            </div>
+            <div class="rating-badge">4.6 ★</div>
+            <span class="reviews-count">63922 Reviews</span>
+            <br>
+            <p class="free-delivery">Free Delivery</p>
+	
+	<button onclick="addToCart('Nike Mens Quest 6 Running Shoes',790,'Shoes16.jpg')">Add to Cart</button>
+       <button class="buy" onclick="buyNow('Nike Mens Quest 6 Running Shoes',790,'Shoes16.jpg')">Buy Now</button>
+
+        </div>
+    </div>
+ <!-- Product 7 -->
+    <div class="product-card">
+        <div class="image-container">
+           <img src="Shoes17.jpg" alt="Shoes">
+        </div>
+        <div class="content">
+            <p class="title">Brooks Men's Beast '20 Supportive Running Shoe</p>
+            <div class="price-section">
+                <span class="current-price">₹1999</span>
+                <span class="old-price">₹35999</span>
+                <span class="discount-percent">97% off</span>
+            </div>
+            <div class="rating-badge">4.1 ★</div>
+            <span class="reviews-count">96392 Reviews</span>
+            <br>
+            <p class="free-delivery">Free Delivery</p>
+	
+	<button onclick="addToCart('Brooks Mens Beast 20 Supportive Running Shoe',1999,'Shoes17.jpg')">Add to Cart</button>
+       <button class="buy" onclick="buyNow('Brooks Mens Beast 20 Supportive Running Shoe',1999,'Shoes17.jpg')">Buy Now</button>
+
+        </div>
+    </div>
+ <!-- Product 8 -->
+    <div class="product-card">
+        <div class="image-container">
+           <img src="Shoes19.jpg" alt="Shoes">
+        </div>
+        <div class="content">
+            <p class="title">Skechers Mens MAX Cushioning Glide-Step - A Slip-ins Sneaker</p>
+            <div class="price-section">
+                <span class="current-price">₹1099</span>
+                <span class="old-price">₹11999</span>
+                <span class="discount-percent">95% off</span>
+            </div>
+            <div class="rating-badge">4.5 ★</div>
+            <span class="reviews-count">2392 Reviews</span>
+            <br>
+            <p class="free-delivery">Free Delivery</p>
+	
+	<button onclick="addToCart('Skechers Mens MAX Cushioning',1099,'Shoes19.jpg')">Add to Cart</button>
+       <button class="buy" onclick="buyNow('Skechers Mens MAX Cushioning',1099,'Shoes19.jpg')">Buy Now</button>
+
+        </div>
+    </div>
+ <!-- Product 9 -->
+    <div class="product-card">
+        <div class="image-container">
+           <img src="Shoes18.jpg" alt="Shoes">
+        </div>
+        <div class="content">
+            <p class="title">FIELD CARE Impact Athletic Training Walking Gym Sports Adventure Classic Comfort Outdoor Shoes Cushioned Insole Shock Absorbing Outsole</p>
+            <div class="price-section">
+                <span class="current-price">₹599</span>
+                <span class="old-price">₹2999</span>
+                <span class="discount-percent">90% off</span>
+            </div>
+            <div class="rating-badge">4.2 ★</div>
+            <span class="reviews-count">2392 Reviews</span>
+            <br>
+            <p class="free-delivery">Free Delivery</p>
+	
+	<button onclick="addToCart('FIELD CARE Impact Athletic Training Walking Gym Sports Adventure Classic Comfort Outdoor Shoes Cushioned Insole Shock Absorbing Outsole',599,'Shoes18.jpg')">Add to Cart</button>
+       <button class="buy" onclick="buyNow('FIELD CARE Impact Athletic Training Walking Gym Sports Adventure Classic Comfort Outdoor Shoes Cushioned Insole Shock Absorbing Outsole',599,'Shoes18.jpg')">Buy Now</button>
+
+        </div>
+    </div>
+
+
+
+
+
+
+ </div>
+</div>
+
+
+
+    </div>	
+    <div class="Right-shop">
+ 
+    </div>
+
+</div>
+
+
+
+<!-- Back to top -->
+<div class="top-bar">
+    Back to top
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <div class="footer-container">
+
+        <div class="footer-column">
+            <h3>Get to Know Us</h3>
+            <p>About Mini Bajar</p>
+            <p>Careers</p>
+            <p>Press Releases</p>
+            <p>Mini Bajar Science</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Connect with Us</h3>
+            <p><i class="fa-brands fa-square-facebook" style="color: #ffffff;"></i>Facebook</p>
+            <p>Twitter</p>
+            <p>Instagram</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Make Money with Us</h3>
+            <p>Sell on Mini Bajar</p>
+            <p>Sell under Mini Bajar Accelerator</p>
+            <p>Protect and Build Your Brand</p>
+            <p>Mini Bajar Global Selling</p>
+            <p>Supply to Mini Bajar</p>
+            <p>Become an Affiliate</p>
+            <p>Fulfilment by Mini Bajar</p>
+            <p>Advertise Your Products</p>
+            <p>Mini Bajar Pay on Merchants</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Let Us Help You</h3>
+            <p>Your Account</p>
+            <p>Returns Centre</p>
+            <p>Recalls and Product Safety Alerts</p>
+            <p>100% Purchase Protection</p>
+            <p>Mini Bajar App Download</p>
+            <p>Help</p>
+        </div>
+
+    </div>
+</div>
+
+<script>
+document.querySelector(".top-bar").onclick = function() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+};
+</script>
+
+
+</body>
+</html>
