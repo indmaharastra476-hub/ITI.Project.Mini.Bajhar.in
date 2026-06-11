@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>About Our Shop</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #f5f5f5;
+}
+* { box-sizing:border-box; 
+    margin:0%; 
+    font-family:Arial;
+}
+body {background-color: #eaeded;}
+ .box1-logo { 
+	background-color:#0f1111;
+	height:72px;
+	color:white;
+	padding:1px;
+	display:flex;
+	align-items:center;
+	
+ }
+.box-logo {
+	height:70px;
+	width:165px;
+	border:0px solid  ;
+	margin:1px 30px 1px 30px;
+ }
+.box-logo:hover {
+	border:1px solid white;
+ }
+.logo{
+    font-size:30px;
+    font-weight:bold;
+	width:80px; 
+	padding:13px;
+}
+.logo span{
+    color:orange;
+}
+ 
+/* box 2 */
+
+.loca-icon { height:20px;
+	
+ }
+
+#first-1 { 
+	border:1px solid transparnt;
+	padding:13px;
+	 
+ }
+ #first-1:hover { border:1px solid; 
+ }
+.first {
+	color:#cccccc;
+	font-size:15px;
+	width:80px; 
+	
+ }
+ 
+.second {
+	color:white;
+	
+ }
+ 
+ /* box 3 */
+.Search { border:1px solid transparnt;
+
+	display:flex;
+	flex:1;
+	align-center;
+	background-color:#ffbd66ff;
+	border-radius:4px;
+ }
+.Search:hover { border:2px solid #f6971fff; 
+ }
+.search-bar { flex:29;
+	border:none;
+	border-radius:4px 0px 0px 4px;
+ }
+
+.search-icon { height:40px;
+	 
+ }
+.login { display:flex;
+	
+	 font-size:17px;
+	padding:2px;
+ }
+.log { border:solid white transpernt;
+	padding:10px;
+ }
+.log:hover {border:solid white 1px;	
+ }
+
+.log img {height:41px;
+	margin:0px 10px 0px 10px;
+}
+
+.login1 { display:flex;
+	padding:2px;
+ }
+.retan {border:solid white transpernt;
+	padding:17px;
+ }
+.retan:hover {border:solid white 1px;
+ }
+
+#ret {font-size:13px;	
+ }
+#ord { font-weight:bold;
+ }
+.cart { display:flex;
+	padding:2px;
+ }
+.adcart {border:solid white transpernt;
+	padding:23px;
+	font-weight:bold;
+ }
+.adcart:hover {border:solid white 1px;
+ }
+#input {    
+    background-color:black;
+   top:10px;
+    position:sticky;
+    width:auto;
+    padding:8px 18px;
+    border-radius:5px;
+}
+
+header {top:0; 
+	position:sticky;
+ }
+
+/* Navbar */
+.navbar {top:71px; 
+	position:sticky;
+        background: #222e3dff;
+    padding: 7px 0;
+}
+
+/* Center menu */
+.nav-menu {
+    display: flex;
+    justify-content: center; /* center alignment */
+    gap: 40px;
+}
+
+/* Links */
+.nav-menu a {font-weight:700;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+/* Hover effect */
+.nav-menu a:hover {
+    color: #ff9800;
+}
+
+/* ABOUT SECTION */
+
+.about{
+    padding:90px 20px;
+    text-align:center;
+    background:linear-gradient(135deg,#1e293b,#334155);
+    color:white;
+}
+
+.about h1{
+    font-size:60px;
+    margin-bottom:25px;
+}
+
+.about p{
+    font-size:19px;
+    max-width:850px;
+    margin:auto;
+    line-height:1.9;
+    color:#dcdcdc;
+}
+
+/* BUTTON */
+
+.btn{
+    margin-top:35px;
+    padding:15px 40px;
+    border:none;
+    border-radius:50px;
+    background:linear-gradient(45deg,#ff9800,#ff5722);
+    color:white;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.4s;
+}
+
+.btn:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 20px rgba(255,152,0,0.7);
+}
+
+/* EXTRA TEXT */
+
+#moreText{
+    display:none;
+    margin-top:25px;
+    font-size:18px;
+    color:#f1f1f1;
+}
+
+/* CARDS */
+
+.container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    padding:70px 20px;
+    flex-wrap:wrap;
+}
+
+.card{
+    background:white;
+    width:500px;
+    padding:35px 25px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    transition:0.4s;
+    position:relative;
+    overflow:hidden;
+}
+
+.card::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:6px;
+    background:linear-gradient(to right,#ff9800,#ff5722);
+}
+
+.card:hover{
+    transform:translateY(-12px);
+}
+
+.card h3{
+    font-size:25px;
+    margin-bottom:15px;
+    color:#222;
+}
+
+.card p{
+    color:#666;
+    line-height:1.7;
+    font-size:16px;
+}
+
+
+/* FOOTER */
+
+
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .about h1{
+        font-size:42px;
+    }
+
+    .about p{
+        font-size:17px;
+    }
+
+    .nav-menu{
+        gap:20px;
+    }
+
+    .Search{
+        margin:0 10px;
+    }
+}
+
+
+
+
+
+
+
+/* Back to top bar */
+.top-bar {
+    background-color: #37475a;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    cursor: pointer;
+}
+
+/* Footer main */
+.footer {
+    background-color: #232f3e;
+    color: white;
+    padding: 40px 80px;
+}
+
+/* Columns */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    width: 22%;
+}
+
+.footer-column h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.footer-column p {
+    margin: 8px 0;
+    font-size: 14px;
+    color: #ddd;
+    cursor: pointer;
+}
+
+.footer-column p:hover {
+    text-decoration: underline;
+}
+#P2 {     background:linear-gradient(135deg,#1e293b,#334155); }
+
+.owner{
+    margin-top:40px;
+}
+
+.owner-img{
+    width:160px;
+    height:160px;
+    border-radius:50%;
+    border:5px solid orange;
+    object-fit:cover;
+    box-shadow:0 0 20px rgba(0,0,0,0.4);
+}
+
+.owner h2{
+    margin-top:15px;
+    font-size:32px;
+}
+
+.owner-text{
+    font-size:18px;
+    color:#ddd;
+}
+
+
+
+/* REVIEW SECTION */
+
+
+.user-info{ justify-content:center;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.user-img{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+}
+
+.stars{
+    color:green;
+    font-size:22px;
+    margin-bottom:8px;
+}
+
+.review-date{
+    color:#555;
+    font-size:15px;
+    margin-top:5px;
+}
+
+.format{
+    margin-top:5px;
+    font-size:15px;
+}
+
+.verify{
+    color:#ff6600;
+    font-weight:bold;
+    margin-left:10px;
+}
+
+
+
+.review-text{font-weight:bold;
+    margin-top:15px;
+    font-size:19px;
+
+}
+
+h2 { text-align:center; 
+	font-size:40px;
+}
+</style>
+</head>
+
+ <body like="orange" vlink="white">
+
+<header> 
+ <div class="box1-logo">
+   <div class="box-logo">
+     <div class="logo">Mini<span>Bajar</span></div>
+   </div>
+
+   <div class="address">
+   <div id="first-1"><p class="first"> Deliver to </p> <div class="second"><img src="location icon.png" class="loca-icon"> India  </div>    </div> 
+   </div>
+ <p style="color:black"> as</p>
+  <div class="Search">
+  <input placeholder="Search MiniBajar.in" class="search-bar">
+    <div class="Search icon"><img src="search icon.png" class="search-icon">  
+    </div>
+  </div>
+  <div class="login">
+	<div class="log" > <img  src="circle-user-solid.png"></div> 
+
+  </div>
+<div class="login1">
+  <div class="retan"><p id="ret"> Returns</p> <p id="ord"> & Orders </p>
+  </div></div>
+  <div class="cart">
+  <div class="adcart"> 🛒<a href="cart.html" style="color:white; text-decoration: none;">Cart  </a>
+  </div></div>
+
+ </div>
+
+</header>
+
+<!-- Navbar -->
+<div class="navbar">
+    <div class="nav-menu">
+           <a href="Mini Bajar1.html">Home</a>
+
+        <a href="Electronics.html">Electronics</a>
+        
+        <a href="Books.html">Books</a>
+        <a href="About.html">About</a>
+        <a href="Contact.html">Contact</a>
+    </div>
+</div>   
+<p id="P2">
+<button id="input"><a href="Mini Bajar1.html" style="color:white; text-decoration: none;"> Back </a></button>
+</p>
+<!-- ABOUT -->
+
+<div class="about">
+
+    <h1>About MiniBajar</h1>
+
+    <p>
+        Welcome to MiniBajar! We provide premium quality products
+        at affordable prices with fast delivery and trusted service.
+        Our goal is to make online shopping simple, secure,
+        and enjoyable for everyone.
+    </p>
+<!-- OWNER PROFILE -->
+
+<div class="owner">
+
+    <img src="Dipak.jpg.jpeg" class="owner-img">
+
+    <h2>Dipak Barde</h2>
+
+    <p class="owner-text">
+        Founder of MiniBajar Website
+    </p>
+
+</div>
+
+
+    <button class="btn" onclick="showMore()">
+        Read More
+    </button>
+
+    <p id="moreText">
+        MiniBajar started in 2020 with a mission to provide
+        the best shopping experience for customers across India.
+        Thousands of happy customers trust us for quality products,
+        fast delivery, and reliable customer support.
+    </p>
+
+</div>
+
+<!-- FEATURES -->
+
+<div class="container">
+
+    <div class="card">
+
+        <h3>⭐ Quality Products</h3>
+
+        <p>
+            We provide high-quality products with trusted brands
+            and excellent customer satisfaction.
+        </p>
+
+    </div>
+
+    <div class="card">
+
+        <h3>🚚 Fast Delivery</h3>
+
+        <p>
+            Quick and safe delivery service across India
+            with proper packaging and tracking support.
+        </p>
+
+    </div>
+
+    <div class="card">
+
+        <h3>💰 Best Prices</h3>
+
+        <p>
+            Affordable pricing and exciting deals
+            to make shopping budget friendly.
+        </p>
+
+    </div>
+</div>
+
+ <h2>Customer Reviews</h2>
+<!-- CUSTOMER REVIEWS -->
+
+<div class="container">
+
+   
+
+    <!-- Review 1 -->
+
+    <div class="card">
+
+        <div class="user-info">
+            <img src="1000341260.jpg" class="user-img">
+            <span>Ankita Shende</span>
+        </div>
+
+        <div class="stars">★★★★★ <b>Good quality</b></div>
+
+        <p class="review-date">
+            Reviewed in India on 28 December 2025
+        </p>
+
+
+
+
+
+
+        <p class="review-text">
+            Beautiful story
+        </p>
+
+
+
+    </div>
+
+
+
+    <!-- Review 2 -->
+
+    <div class="card">
+
+        <div class="user-info">
+            <img src="anjali.png" class="user-img">
+            <span>Anjali Sondarkar</span>
+        </div>
+
+        <div class="stars">★★★★☆ <b>Best</b></div>
+
+        <p class="review-date">
+            Reviewed in India on 12 May 2026
+        </p>
+
+
+
+
+        <p class="review-text">
+            Best book
+        </p>
+
+
+    </div>
+
+
+
+    <!-- Review 3 -->
+
+    <div class="card">
+
+        <div class="user-info">
+            <img src="Prakhil.jpg" class="user-img">
+            <span>Prakhil Bhowate</span>
+        </div>
+
+        <div class="stars">★★★★★ <b>Amazing Product</b></div>
+
+        <p class="review-date">
+            Reviewed in India on 2 January 2026
+        </p>
+
+
+
+
+
+        <p class="review-text">
+            Very useful and quality product.
+        </p>
+
+
+
+    </div>
+
+</div>
+
+
+<!-- FOOTER -->
+
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+function showMore(){
+
+    var text = document.getElementById("moreText");
+
+    if(text.style.display === "block"){
+
+        text.style.display = "none";
+
+    }else{
+
+        text.style.display = "block";
+    }
+}
+
+</script>
+
+<!-- Back to top -->
+<div class="top-bar">
+    Back to top
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <div class="footer-container">
+
+        <div class="footer-column">
+            <h3>Get to Know Us</h3>
+            <p>About Mini Bajar</p>
+            <p>Careers</p>
+            <p>Press Releases</p>
+            <p>Mini Bajar Science</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Connect with Us</h3>
+            <p><i class="fa-brands fa-square-facebook" style="color: #ffffff;"></i>Facebook</p>
+            <p>Twitter</p>
+            <p>Instagram</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Make Money with Us</h3>
+            <p>Sell on Mini Bajar</p>
+            <p>Sell under Mini Bajar Accelerator</p>
+            <p>Protect and Build Your Brand</p>
+            <p>Mini Bajar Global Selling</p>
+            <p>Supply to Mini Bajar</p>
+            <p>Become an Affiliate</p>
+            <p>Fulfilment by Mini Bajar</p>
+            <p>Advertise Your Products</p>
+            <p>Mini Bajar Pay on Merchants</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Let Us Help You</h3>
+            <p>Your Account</p>
+            <p>Returns Centre</p>
+            <p>Recalls and Product Safety Alerts</p>
+            <p>100% Purchase Protection</p>
+            <p>Mini Bajar App Download</p>
+            <p>Help</p>
+        </div>
+
+    </div>
+</div>
+
+<script>
+document.querySelector(".top-bar").onclick = function() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+};
+</script>
+
+</body>
+</html>

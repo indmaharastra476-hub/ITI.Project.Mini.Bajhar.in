@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Books</title>
+
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+        body { background-color: #ffffff; } 
+
+        .box1-logo { 
+            background-color:#0f1111;
+            height:72px;
+            color:white;
+            padding:1px;
+            display:flex;
+            align-items:center;
+        }
+#input {
+    margin-left:15px;
+    margin-top:5px;
+    background-color:black;
+    top:110px;
+    position:sticky;
+    width:auto;
+    padding:8px 18px;
+    border-radius:5px;
+}
+
+
+
+.slider-section {
+    background-color: #ffffff;
+    padding: 25px 35px;
+    max-width: 1550px;
+    margin: 40px auto;
+    position: relative;
+    border-radius: 6px;
+    height: 640px;
+    overflow: hidden;
+}
+
+.slider-title {
+    font-size: 29px;
+    font-weight: 700;
+    color: #111111;
+    margin-bottom: 10px;
+ font-family:Arial Black; 
+
+}
+
+.product-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 10px 5px;
+    height: 560px;
+}
+
+.product-slider::-webkit-scrollbar {
+    display: none;
+}
+
+.product-item {
+    min-width: 430px;
+    max-width: 350px;
+    background: #ffffff;
+
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-shrink: 0;
+}
+
+.img-container {
+    width: 100%;
+    height: 370px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-container img {
+    max-width: 100%;
+    max-height: 340px;
+    object-fit: contain;
+}
+
+.p-name {
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.p-brand {
+    font-size: 11px;
+    color: gray;
+    margin-top: 5px;
+}
+
+.price-row {
+    margin-top: 10px;
+}
+
+.current-price {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.mrp {
+    text-decoration: line-through;
+    color: gray;
+    margin-left: 6px;
+    font-size:12px;
+}
+
+.btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 15px;
+}
+
+
+
+.buy {
+    background: orange;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+}
+button {
+    background: #ffd814;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+margin-bottom: 3px;
+ width:100%;
+    font-weight: bold;
+}
+
+.arrow-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 60px;
+    border: none;
+    background: white;
+    cursor: pointer;
+    font-size: 22px;
+    z-index: 10;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+        header {
+            top:0; 
+            position:sticky;
+            z-index: 1000;
+        }
+
+        .box-logo {
+            height:70px;
+            width:165px;
+            border:0px solid;
+            margin:1px 30px 1px 30px;
+        }
+        .box-logo:hover {
+            border:1px solid white;
+        }
+        .logo{
+            font-size:30px;
+            font-weight:bold;
+            width:80px; 
+            padding:13px;
+        }
+        .logo span{
+            color:orange;
+        }
+        
+        /* box 2 */
+        .loca-icon { height:20px; }
+
+        #first-1 { 
+            border:1px solid transparent;
+            padding:13px;
+        }
+        #first-1:hover { border:1px solid white; }
+        
+        .first {
+            color:#cccccc;
+            font-size:15px;
+            width:80px; 
+        }
+        
+        .second { color:white; }
+        
+        /* box 3 */
+        .Search { 
+            border:1px solid transparent;
+            display:flex;
+            flex:1;
+            align-items:center;
+            background-color:#ffbd66ff;
+            border-radius:4px;
+            height: 40px;
+        }
+        .Search:hover { border:2px solid #f6971fff; }
+        .search-bar { 
+            flex:29;
+            border:none;
+            border-radius:4px 0px 0px 4px;
+            height: 100%;
+            padding: 10px;
+            outline: none;
+        }
+
+        .search-icon { height:40px; cursor: pointer; }
+        
+        .login { display:flex; font-size:17px; padding:2px; }
+        .log { border:1px solid transparent; padding:10px; cursor: pointer; }
+        .log:hover { border:1px solid white; }
+        .log img { height:41px; margin:0px 10px 0px 10px; }
+
+        .login1 { display:flex; padding:2px; }
+        .retan { border:1px solid transparent; padding:17px; cursor: pointer; }
+        .retan:hover { border:1px solid white; }
+
+        #ret { font-size:13px; }
+        #ord { font-weight:bold; }
+        
+        .cart { display:flex; padding:2px; }
+        .adcart { border:1px solid transparent; padding:23px; font-weight:bold; cursor: pointer; }
+        .adcart:hover { border:1px solid white; }
+        .adcart a { color: white; text-decoration: none; }
+
+        /* Navbar */
+        .navbar {
+            top:71px; 
+            position:sticky;
+            background: #222e3dff;
+            padding: 7px 0;
+            z-index: 999;
+        }
+
+        .nav-menu {
+            display: flex;
+            justify-content: center; 
+            gap: 40px;
+        }
+
+        .nav-menu a {
+            font-weight:700;
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            transition: 0.3s;
+        }
+        .nav-menu a:hover { color: #ff9800; }
+
+
+
+
+/* Back to top bar */
+.top-bar {
+    background-color: #37475a;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    cursor: pointer;
+}
+
+/* Footer main */
+.footer {
+    background-color: #232f3e;
+    color: white;
+    padding: 40px 80px;
+}
+
+/* Columns */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    width: 22%;
+}
+
+.footer-column h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.footer-column p {
+    margin: 8px 0;
+    font-size: 14px;
+    color: #ddd;
+    cursor: pointer;
+}
+
+.footer-column p:hover {
+    text-decoration: underline;
+}
+
+h1 {text-align:center; color: }
+
+
+.Shop-Now {  display: flex;
+	
+	
+	
+ }
+.Left-shop {
+	
+ }
+
+.Center-shop { width:100%;
+
+
+
+
+
+
+ }
+
+
+     /* Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+            gap: 20px;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        /* Product Card */
+        .product-card { 
+           padding:5px;
+           border-radius:4px;
+            overflow: hidden;
+            border: 1px solid #f0f0f0;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .image-container {
+            width: 100%;
+            height: 300px;
+            background: #fdfdfd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            max-height: 300px;
+            object-fit: contain;
+        }
+
+        .content {
+            padding: 12px;
+        }
+
+        .title {
+            font-size: 14px;
+            color: #8b8b8b;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-bottom: 5px;
+        }
+
+        .price-section {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .current-price {
+            font-size: 18px;
+            font-weight: 700;
+            color: #2d3436;
+        }
+
+        .old-price {
+            font-size: 13px;
+            color: #999;
+            text-decoration: line-through;
+        }
+
+        .discount-percent {
+            font-size: 12px;
+            color: #03a685;
+            font-weight: 600;
+        }
+
+        /* Green Rating Badge */
+        .rating-badge {
+            display: inline-flex;
+            align-items: center;
+            background-color: #03a685;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .reviews-count {
+            font-size: 11px;
+            color: #999;
+            margin-left: 5px;
+        }
+
+        .free-delivery {
+            font-size: 12px;
+            color: #555;
+            background: #f1f1f1;
+            padding: 2px 8px;
+            border-radius: 4px;
+            display: inline-block;
+	margin-bottom: 5px;
+        }
+
+
+
+
+
+.Right-shop {
+	
+ }
+
+.hh22 { padding:20px; text-align:center; font-size:30px;}
+
+
+
+
+
+    </style>
+
+    <script>
+function buyNow(name, price, image){
+
+    let buyProduct = [{
+        name: name,
+        price: price,
+        image: image
+    }];
+
+    localStorage.setItem("cart", JSON.stringify(buyProduct));
+
+    window.location.href = "Address.html";
+}
+
+function addToCart(name, price, image) {
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    cart.push({name, price, image});
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    alert("Added to Cart!");
+    window.location.href = "cart.html"; 
+}
+
+        function slide(sliderId, distance) {
+            document.getElementById(sliderId).scrollBy({
+                left: distance,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</head>
+<body>
+
+<header> 
+ <div class="box1-logo">
+   <div class="box-logo">
+     <div class="logo">Mini<span>Bajar</span></div>
+   </div>
+
+   <div class="address">
+       <div id="first-1">
+           <p class="first"> Deliver to </p> 
+           <div class="second"><img src="location icon.png" class="loca-icon"> India </div>    
+       </div> 
+   </div>
+   <p style="color:black"> as</p>
+   
+   <div class="Search">
+       <input placeholder="Search MiniBajar.in" class="search-bar">
+       <div class="Search icon"><img src="search icon.png" class="search-icon"></div>
+   </div>
+   
+   <div class="login">
+       <div class="log"><a href="Profile.html"><img src="circle-user-solid.png"></a></div> 
+   </div>
+   
+   <div class="login1">
+       <div class="retan"><p id="ret"> Returns</p> <p id="ord"> & Orders </p></div>
+   </div>
+   
+   <div class="cart">
+       <div class="adcart">🛒<a href="cart.html">Cart</a></div>
+   </div>
+ </div>
+</header>
+
+<div class="navbar">
+    <div class="nav-menu">
+           <a href="Mini Bajar1.html">Home</a>
+
+        <a href="Electronics.html">Electronics</a>
+        
+        <a href="Books.html">Books</a>
+        <a href="About.html">About</a>
+        <a href="Contact.html">Contact</a>
+    </div>
+</div>
+<button id="input"><a href="Mini Bajar1.html" style="color:white; text-decoration: none;"> Back </a></button>
+
+
+
+
+
+
+ <h1>Shop books</h1>
+
+
+<div class="slider-section">
+    <h2 class="slider-title">Most famous novel</h2>
+
+    <button class="arrow-btn left-arrow" onclick="slide('gamingSlider', -270)">❮</button>
+    <button class="arrow-btn right-arrow" onclick="slide('gamingSlider', 270)">❯</button>
+
+    <div class="product-slider" id="gamingSlider">
+
+<!-- Product 1 -->
+        <div class="product-item">
+            <div>
+                <div class="img-container">
+                    <img src="actumber book.jpg" alt="Mouse">
+                </div>
+
+                <p class="p-name">October Junction</p>
+
+
+                <div class="price-row">
+                    <span class="current-price">₹49</span>
+                    <span class="mrp">₹169</span>
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <button onclick="addToCart('October Junction',49,'actumber book.jpg')">Add to Cart</button>
+                <button class="buy" onclick="buyNow('October Junction',49,'actumber book.jpg')">Buy Now</button>
+            </div>
+        </div>
+
+
+<!-- Product 2 -->
+<div class="product-item">
+    <div>
+        <div class="img-container">
+            <img src="gunahoka devata book.jpg" alt="Keyboard">
+        </div>
+
+        <p class="p-name">Gunahon Ka Devta</p>
+
+
+        <div class="price-row">
+            <span class="current-price">₹69</span>
+            <span class="mrp">₹160</span>
+        </div>
+    </div>
+
+    <div class="btn-group">
+                <button onclick="addToCart('Gunahon Ka Devta ',69,'gunahoka devata book.jpg')">Add to Cart</button>
+        <button class="buy" onclick="buyNow('Gunahon Ka Devta ',69,'gunahoka devata book.jpg')">Buy Now</button>
+    </div>
+</div>
+
+<!-- Product 3 -->
+<div class="product-item">
+    <div>
+        <div class="img-container">
+            <img src="ret ki muchali book.jpg" alt="Mouse">
+        </div>
+
+        <p class="p-name">Ret Ki Machhali </p>
+
+
+        <div class="price-row">
+            <span class="current-price">₹70</span>
+            <span class="mrp">₹256</span>
+        </div>
+    </div>
+
+    <div class="btn-group">
+                <button onclick="addToCart('Ret Ki Machhali ',70,'ret ki muchali book.jpg')">Add to Cart</button>
+        <button class="buy" onclick="buyNow('Ret Ki Machhali ',70,'ret ki muchali book.jpg')">Buy Now</button>
+    </div>
+</div>
+
+<!-- Product 4 -->
+<div class="product-item">
+    <div>
+        <div class="img-container">
+            <img src="musafir book.jpg" alt="Mouse">
+        </div>
+
+        <p class="p-name">Musafir Cafe </p>
+
+
+        <div class="price-row">
+            <span class="current-price">₹55</span>
+            <span class="mrp">₹129</span>
+        </div>
+    </div>
+
+    <div class="btn-group">
+                <button onclick="addToCart('Musafir Cafe ',55,'musafir book.jpg')">Add to Cart</button>
+        <button class="buy" onclick="buyNow('Musafir Cafe ',55,'musafir book.jpg')">Buy Now</button>
+    </div>
+</div>
+
+<!-- Product 5 -->
+<div class="product-item">
+    <div>
+        <div class="img-container">
+            <img src="aughad.jpg" alt="Headphone">
+        </div>
+
+        <p class="p-name">Aughad / औघड़ </p>
+
+
+        <div class="price-row">
+            <span class="current-price">₹62</span>
+            <span class="mrp">₹299</span>
+        </div>
+    </div>
+
+    <div class="btn-group">
+                <button onclick="addToCart('Aughad / औघड़ ',62,'aughad.jpg')">Add to Cart</button>
+        <button class="buy" onclick="buyNow('Aughad / औघड़ ',62,'aughad.jpg')">Buy Now</button>
+    </div>
+</div>
+
+<!-- Product 6 -->
+<div class="product-item">
+    <div>
+        <div class="img-container">
+            <img src="divar.jpg" alt="Headphone">
+        </div>
+
+        <p class="p-name">दीवार में एक खिड़की रहती थी</p>
+
+
+        <div class="price-row">
+            <span class="current-price">₹52</span>
+            <span class="mrp">₹199</span>
+        </div>
+    </div>
+
+    <div class="btn-group">
+                <button onclick="addToCart('दीवार में एक खिड़की रहती थी',52,'divar.jpg')">Add to Cart</button>
+        <button class="buy" onclick="buyNow('दीवार में एक खिड़की रहती थी',52,'divar.jpg')">Buy Now</button>
+    </div>
+</div>
+<!-- Product 7 -->
+<div class="product-item">
+    <div>
+        <div class="img-container">
+            <img src="sopi ka book.jpg" alt="Headphone">
+        </div>
+
+        <p class="p-name">Sophie Ka Sansar </p>
+
+
+        <div class="price-row">
+            <span class="current-price">₹72</span>
+            <span class="mrp">₹299</span>
+        </div>
+    </div>
+
+    <div class="btn-group">
+                <button onclick="addToCart('दीवार में एक खिड़की रहती थी',72,'sopi ka book.jpg')">Add to Cart</button>
+        <button class="buy" onclick="buyNow('दीवार में एक खिड़की रहती थी',72,'sopi ka book.jpg')">Buy Now</button>
+    </div>
+</div>
+<!-- Product 8 -->
+<div class="product-item">
+    <div>
+        <div class="img-container">
+            <img src="jana he book.jpg" alt="Headphone">
+        </div>
+
+        <p class="p-name">Jaana Jaruri Hai Kya </p>
+
+
+        <div class="price-row">
+            <span class="current-price">₹61</span>
+            <span class="mrp">₹209</span>
+        </div>
+    </div>
+
+    <div class="btn-group">
+                <button onclick="addToCart('Jaana Jaruri Hai Kya ',61,'jana he book.jpg')">Add to Cart</button>
+        <button class="buy" onclick="buyNow('Jaana Jaruri Hai Kya ',61,'jana he book.jpg')">Buy Now</button>
+    </div>
+</div>
+
+
+
+
+
+    </div>
+
+</div>
+
+<div class="Shop-Now">
+    <div class="Left-shop">
+
+
+    </div>
+    <div class="Center-shop">
+
+ <h2 class="hh22">Children books</h2>
+<div class="product-grid">
+    <!-- Product 1 -->
+    <div class="product-card">
+        <div class="image-container">
+        <img src="book.jpg" alt="Kurti">
+        </div>
+        <div class="content">
+            <p class="title">108 Panchatantra Story Book for Kids (Hindi) (Illustrated) - Panchatantra Ki Kahaniyan - Moral Story Book - Bedtime Stories - Age 3+ - Read Aloud to Infants, Toddlers</p>
+            <div class="price-section">
+                <span class="current-price">₹60</span>
+                <span class="old-price">₹199</span>
+
+            </div>
+   
+	
+	<button onclick="addToCart('108 Panchatantra Story Book for Kids (Hindi) (Illustrated) - Panchatantra Ki Kahaniyan - Moral Story Book - Bedtime Stories - Age 3+ - Read Aloud to Infants',60,'book.jpg')">Add to Cart</button>
+       <button class="buy" onclick="buyNow('108 Panchatantra Story Book for Kids (Hindi) (Illustrated) - Panchatantra Ki Kahaniyan - Moral Story Book - Bedtime Stories - Age 3+ - Read Aloud to Infants',60,'book.jpg')">Buy Now</button>
+
+        </div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-card">
+        <div class="image-container">
+            <img src="book1.jpg" alt="Shoes">
+        </div>
+        <div class="content">
+            <p class="title">Vikram and Betaal (Hindi) (Illustrated) - Story Book for Kids - Hindi Short Stories for Children - Bedtime Stories - Children Story Book - Stories for ... Kathayan - Story Book for Kids - Age 6+)</p>
+            <div class="price-section">
+                <span class="current-price">₹40</span>
+                <span class="old-price">₹99</span>
+
+            </div>
+
+	<button onclick="addToCart('Vikram and Betaal (Hindi) (Illustrated) - Story Book for Kids - Hindi Short Stories for Children - Bedtime Stories - Children Story Book - Stories for ... Kathayan - Story Book for Kids - Age 6+)',40,'book1.jpg')">Add to Cart</button>
+        <button class="buy" onclick="buyNow()">Buy Now</button>
+        </div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product-card">
+        <div class="image-container">
+            <img src="book2.jpg" alt="Bluetooth">
+        </div>
+        <div class="content">
+            <p class="title">Story Books for Kids - World Classic (Abridged) (Set of 10 Books) (Hindi) - Moral Stories - Bedtime Children Story Book - Read Aloud to Infants, Toddlers - Alice in Wonderland, Around the World in 80 Days, Gulliver's Travels, Pinocchio, The Wizard of Oz, Peter Pan, Treasure Island, Heidi, Jungle Book, Robinson Crusoe</p>
+            <div class="price-section">
+                <span class="current-price">₹90</span>
+                <span class="old-price">₹299</span>
+
+            </div>
+
+	<button onclick="addToCart('Story Books for Kids - World Classic (Abridged) (Set of 10 Books) (Hindi) - Moral Stories - Bedtime Children Story Book',90,'book2.jpg')">Add to Cart</button>
+        <button class="buy" onclick="buyNow('Story Books for Kids - World Classic (Abridged) (Set of 10 Books) (Hindi) - Moral Stories - Bedtime Children Story Book',90,'book2.jpg')">Buy Now</button>
+        </div>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="product-card">
+        <div class="image-container">
+            <img src="book3.jpg" alt="Kurta Pant">
+        </div>
+        <div class="content">
+            <p class="title">Tenali Raman (Hindi) (Illustrated) - Story Book for Kids - Hindi Short Stories for Children - Bedtime Stories - Children Story Book - Stories for Kids 6+ - Read Aloud to Infants, Toddlers - Moral Story Book</p>
+            <div class="price-section">
+                <span class="current-price">₹42</span>
+                <span class="old-price">₹99</span>
+
+            </div>
+
+	<button onclick="addToCart('Tenali Raman (Hindi) (Illustrated) - Story Book for Kids - Hindi Short Stories for Children - Bedtime Stories - Children Story Book - Stories for Kids 6+ - Read Aloud to Infants Toddlers - Moral Story Book',42,'book3.jpg')">Add to Cart</button>
+        <button class="buy" onclick="buyNow('Tenali Raman (Hindi) (Illustrated) - Story Book for Kids - Hindi Short Stories for Children - Bedtime Stories - Children Story Book - Stories for Kids 6+ - Read Aloud to Infants Toddlers - Moral Story Book',42,'book3.jpg')">Buy Now</button>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+ <h2 class="hh22">Young Adults </h2>
+<div class="product-grid">
+    <!-- Product 1 -->
+    <div class="product-card">
+        <div class="image-container">
+      <img src="book4.jpg" alt="Kurti">
+        </div>
+        <div class="content">
+            <p class="title">Hindi short stories Kya Mai Zinda Hoon? </p>
+            <div class="price-section">
+                <span class="current-price">₹60</span>
+                <span class="old-price">₹199</span>
+
+            </div>
+   
+	
+	<button onclick="addToCart('Hindi short stories Kya Mai Zinda Hoon? ',60,'book4.jpg')">Add to Cart</button>
+       <button class="buy" onclick="buyNow('Hindi short stories Kya Mai Zinda Hoon? ',60,'book4.jpg')">Buy Now</button>
+
+        </div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-card">
+        <div class="image-container">
+            <img src="book6.jpg" alt="Shoes">
+        </div>
+        <div class="content">
+            <p class="title">Woh Kon Thi? (Hindi)</p>
+            <div class="price-section">
+                <span class="current-price">₹85</span>
+                <span class="old-price">₹249</span>
+
+            </div>
+
+	<button onclick="addToCart('Woh Kon Thi? (Hindi)',85,'book6.jpg')">Add to Cart</button>
+        <button class="buy" onclick="buyNow('Woh Kon Thi? (Hindi)',85,'book6.jpg')">Buy Now</button>
+        </div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product-card">
+        <div class="image-container">
+            <img src="book5.jpg" alt="Bluetooth">
+        </div>
+        <div class="content">
+            <p class="title">Ramdas | एक असफल युवक की प्रेम और अनुशासन से नवजीवन की कहानी | Love Story Books in Hindi | Emotional Hindi Upanyas Books</p>
+            <div class="price-section">
+                <span class="current-price">₹75</span>
+                <span class="old-price">₹249</span>
+
+            </div>
+
+	<button onclick="addToCart('Ramdas | एक असफल युवक की प्रेम और अनुशासन से नवजीवन की कहानी | Love Story Books in Hindi |',75,'book5.jpg')">Add to Cart</button>
+        <button class="buy" onclick="buyNow('Ramdas | एक असफल युवक की प्रेम और अनुशासन से नवजीवन की कहानी | Love Story Books in Hindi |',75,'book5.jpg')">Buy Now</button>
+        </div>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="product-card">
+        <div class="image-container">
+            <img src="book7.jpg" alt="Kurta Pant">
+        </div>
+        <div class="content">
+            <p class="title">Hazaaron Khwahishen</p>
+            <div class="price-section">
+                <span class="current-price">₹90</span>
+                <span class="old-price">₹299</span>
+
+            </div>
+
+	<button onclick="addToCart('Hazaaron Khwahishen',90,'book7.jpg')">Add to Cart</button>
+        <button class="buy" onclick="buyNow('Hazaaron Khwahishen',90,'book7.jpg')">Buy Now</button>
+        </div>
+
+    </div>
+
+
+</div>
+
+ <h2 class="hh22">Business </h2>
+<div class="product-grid">
+    <!-- Product 1 -->
+    <div class="product-card">
+        <div class="image-container">
+      <img src="busine3.jpg" alt="Kurti">
+        </div>
+        <div class="content">
+            <p class="title">Doing the Right Thing: Learnings from Ratan Tata | Leadership, Life Lessons and Vision | By the Bestselling Author of Tata Log and #Tatastories, Harish Bhat </p>
+            <div class="price-section">
+                <span class="current-price">₹159</span>
+                <span class="old-price">₹599</span>
+
+            </div>
+   
+	
+	<button onclick="addToCart('Doing the Right Thing: Learnings from Ratan Tata | Leadership Life Lessons and Vision | By the Bestselling Author of Tata Log and #Tatastories Harish Bhat',159,'busine3.jpg')">Add to Cart</button>
+       <button class="buy" onclick="buyNow('Doing the Right Thing: Learnings from Ratan Tata | Leadership Life Lessons and Vision | By the Bestselling Author of Tata Log and #Tatastories Harish Bhat',159,'busine3.jpg')">Buy Now</button>
+
+        </div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-card">
+        <div class="image-container">
+            <img src="busine1.jpg" alt="Shoes">
+        </div>
+        <div class="content">
+            <p class="title">THE LAWS OF HUMAN NATURE</p>
+            <div class="price-section">
+                <span class="current-price">₹125</span>
+                <span class="old-price">₹549</span>
+
+            </div>
+
+	<button onclick="addToCart('THE LAWS OF HUMAN NATURE',125,'busine1.jpg')">Add to Cart</button>
+        <button class="buy" onclick="buyNow('THE LAWS OF HUMAN NATURE',125,'busine1.jpg')">Buy Now</button>
+        </div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product-card">
+        <div class="image-container">
+      <img src="busine.jpg" alt="Kurti">
+        </div>
+        <div class="content">
+            <p class="title">Rich Dad Poor Dad - 20Th Anniversary Edition - Hindi </p>
+            <div class="price-section">
+                <span class="current-price">₹109</span>
+                <span class="old-price">₹499</span>
+
+            </div>
+   
+	
+	<button onclick="addToCart('Rich Dad Poor Dad - 20Th Anniversary Edition - Hindi',109,'busine.jpg')">Add to Cart</button>
+       <button class="buy" onclick="buyNow('Rich Dad Poor Dad - 20Th Anniversary Edition - Hindi',109,'busine.jpg')">Buy Now</button>
+
+        </div>
+    </div>
+    <!-- Product 4 -->
+    <div class="product-card">
+        <div class="image-container">
+            <img src="busine2.jpg" alt="Kurta Pant">
+        </div>
+        <div class="content">
+            <p class="title">Think and Grow Rich by Napoleon Hill - Self-help Classic | Goal Achievement Strategies and Success Philosophy | Personal Development Book for Financial Success | Wealth Creation Strategies | Prosperity Principles | Original Premium Paperback Edition</p>
+            <div class="price-section">
+                <span class="current-price">₹55</span>
+                <span class="old-price">₹199</span>
+
+            </div>
+
+	<button onclick="addToCart('Think and Grow Rich by Napoleon Hill - Self-help Classic | Goal Achievement Strategies and Success Philosophy | Personal Development Book for Financial Success | Wealth Creation Strategies | Prosperity Principles | Original Premium Paperback Edition',55,'busine2.jpg')">Add to Cart</button>
+        <button class="buy" onclick="buyNow('Think and Grow Rich by Napoleon Hill - Self-help Classic | Goal Achievement Strategies and Success Philosophy | Personal Development Book for Financial Success | Wealth Creation Strategies | Prosperity Principles | Original Premium Paperback Edition',55,'busine2.jpg')">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    </div>	
+    <div class="Right-shop">
+ 
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Back to top -->
+<div class="top-bar">
+    Back to top
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <div class="footer-container">
+
+        <div class="footer-column">
+            <h3>Get to Know Us</h3>
+            <p>About Mini Bajar</p>
+            <p>Careers</p>
+            <p>Press Releases</p>
+            <p>Mini Bajar Science</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Connect with Us</h3>
+            <p><i class="fa-brands fa-square-facebook" style="color: #ffffff;"></i>Facebook</p>
+            <p>Twitter</p>
+            <p>Instagram</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Make Money with Us</h3>
+            <p>Sell on Mini Bajar</p>
+            <p>Sell under Mini Bajar Accelerator</p>
+            <p>Protect and Build Your Brand</p>
+            <p>Mini Bajar Global Selling</p>
+            <p>Supply to Mini Bajar</p>
+            <p>Become an Affiliate</p>
+            <p>Fulfilment by Mini Bajar</p>
+            <p>Advertise Your Products</p>
+            <p>Mini Bajar Pay on Merchants</p>
+        </div>
+
+        <div class="footer-column">
+            <h3>Let Us Help You</h3>
+            <p>Your Account</p>
+            <p>Returns Centre</p>
+            <p>Recalls and Product Safety Alerts</p>
+            <p>100% Purchase Protection</p>
+            <p>Mini Bajar App Download</p>
+            <p>Help</p>
+        </div>
+
+    </div>	
+</div>
+
+<script>
+document.querySelector(".top-bar").onclick = function() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+};
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
